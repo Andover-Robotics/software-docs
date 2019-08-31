@@ -6,7 +6,7 @@ description: 'It consists of a phone, a hardware hub, and another phone.'
 
 ## Components
 
-![Components of the FTC Control System \(from official wiki\)](.gitbook/assets/image%20%288%29.png)
+![Components of the FTC Control System \(from official wiki\)](.gitbook/assets/image%20%2810%29.png)
 
 Robots in FTC are controlled using Android phones. The **Robot Controller** phone is secured on the robot and connected to all of its electronics, whereas the **Driver Station** is kept with the drivers and connected to the game controllers. These two phones communicate with each other using WiFi Direct.
 
@@ -24,25 +24,25 @@ Before we dive into the hardware controllers, we need to familiarize ourselves w
 
 ### Anderson Powerpole
 
-![The Anderson Powerpole Connector \(from goBILDA.com\)](.gitbook/assets/image%20%2812%29.png)
+![The Anderson Powerpole Connector \(from goBILDA.com\)](.gitbook/assets/image%20%2814%29.png)
 
 The **Anderson Powerpole** \(or simply **Powerpole**\) connector is the most popular power delivery connector in FTC. It typically delivers at least 12V to the various hardware controllers and motors of the robot.
 
 ### XT30
 
-![The XT30 Connector \(from goBILDA.com\)](.gitbook/assets/image%20%2810%29.png)
+![The XT30 Connector \(from goBILDA.com\)](.gitbook/assets/image%20%2812%29.png)
 
 The **XT30** connector is primarily found on REV products only. It delivers power from the 12V robot battery to the REV Expansion Hubs.
 
 ### Tamiya
 
-![The Tamiya Connector \(from goBILDA.com\)](.gitbook/assets/image%20%283%29.png)
+![The Tamiya Connector \(from goBILDA.com\)](.gitbook/assets/image%20%285%29.png)
 
 The **Tamiya** connector is probably the second most popular connector in modern FTC. Most competition-legal batteries have a Tamiya interface.
 
 ### JST VH
 
-![The JST VH Connector \(from goBILDA.com\)](.gitbook/assets/image%20%286%29.png)
+![The JST VH Connector \(from goBILDA.com\)](.gitbook/assets/image%20%288%29.png)
 
 The **JST VH** connector connects REV Expansion Hubs to various 12V motors. They only deliver power.
 
@@ -54,7 +54,7 @@ As of 2019-2020, ARC has two types of hardware controllers: Modern Robotics and 
 
 ### Modern Robotics
 
-![Parts included in the MR Robot Electronics Bundle \(from official website\)](.gitbook/assets/image%20%285%29.png)
+![Parts included in the MR Robot Electronics Bundle \(from official website\)](.gitbook/assets/image%20%287%29.png)
 
 Despite its optimistic name, Modern Robotics \(MR\) electronics components [will become illegal in the 2020-2021 season](http://firsttechchallenge.blogspot.com/2019/06/first-tech-challenge-technology-updates.html). ARC has primarily relied on these for the past three years, so we have them in great abundance. There are four types of controllers in the Modern Robotics system:
 
@@ -75,7 +75,7 @@ All electronics in the Modern Robotics system \(except motors\) run at 5 volts. 
 
 ## REV Expansion Hub
 
-![Diagram of connections for the REV Expansion Hub \(from official wiki\)](.gitbook/assets/image%20%287%29.png)
+![Diagram of connections for the REV Expansion Hub \(from official wiki\)](.gitbook/assets/image%20%289%29.png)
 
 Unlike the Modern Robotics system, the [**REV Expansion Hub**](http://www.revrobotics.com/rev-31-1153/) combines the adapters for all types of peripherals into one unit. Each unit supports four motors, six servos, two analog sensors, four digital sensors, and four I²C sensors. Typically, each competition robot has two Expansion Hubs that are connected to each other using [this process](https://github.com/ftctechnh/ftc_app/wiki/Using-Two-Expansion-Hubs).
 

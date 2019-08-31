@@ -4,7 +4,19 @@ description: Welcome! Let's make your robot smart.
 
 # Introduction
 
-
+{% code-tabs %}
+{% code-tabs-item title="The FTC Programmer Role" %}
+```java
+if (notWinning) {
+    blameTheProgrammers();
+} else if (mechanicalProblemOnRobot) {
+    yellToTheProgrammersAboutHowTheyAreUselessAndCannotDoAnything();
+} else {
+    giveTheProgrammersImpossibleDemands();
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 ## General Programming Resources
 
