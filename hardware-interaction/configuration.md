@@ -2,7 +2,7 @@
 description: How do you call the motor plugged into this port? "motorFL".
 ---
 
-# Configuring Hardware
+# Hardware Configuration
 
 To be ultimately useful, your OpMode needs to be able to interact with robot hardware. In FTC, each hardware device that you wish to use has a distinct name, using which you reference the device in code. A collection of mappings from device names to their respective hardware ports is a **configuration**.
 
@@ -29,4 +29,12 @@ In addition to the configuration itself, we recommend that you put descriptive, 
 ![A label for a wire \(from FTC YouTube video &quot;REV - Managing Wires&quot;\)](../.gitbook/assets/image%20%283%29.png)
 
 Although the club does not have official device naming conventions, we recommend that your team establish some guidelines about device names. Following these guidelines reduces inconsistency and helps you remember the names exactly when referencing them in code later.
+
+## Using a Configuration in Code
+
+To retrieve instances of hardware devices using the active configuration, we use a field in the `OpMode` class named [`hardwareMap`](https://ftctechnh.github.io/ftc_app/doc/javadoc/com/qualcomm/robotcore/eventloop/opmode/OpMode.html#hardwareMap). To retrieve a `DcMotor` with name `leftLift` in the configuration, for example, we use `hardwareMap.dcMotor.get("leftLift")`. We can then pass the returned instance to a field in our OpMode, a local variable, or the constructor of another class.
+
+Refer to the `HardwareMap` class for how to obtain instances of more types of electronics.
+
+{% embed url="https://ftctechnh.github.io/ftc\_app/doc/javadoc/com/qualcomm/robotcore/hardware/HardwareMap.html" %}
 

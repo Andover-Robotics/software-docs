@@ -13,7 +13,7 @@
 
 ## Hardware Interaction
 
-* [Configuring Hardware](hardware-interaction/configuration.md)
+* [Hardware Configuration](hardware-interaction/configuration.md)
 * [DcMotor](hardware-interaction/dcmotor.md)
 * [Servos](hardware-interaction/servos.md)
 * [Sensors](hardware-interaction/sensors.md)
