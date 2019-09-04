@@ -26,7 +26,7 @@ Recently, the club has obtained many Neverest Gearmotors for more rigorous use c
 
 ### goBILDA Yellow Jacket Gear Motor
 
-![A 13.7:1 ratio Yellow Jacket Gear Motor \(from goBILDA\)](../.gitbook/assets/image%20%2816%29.png)
+![A 13.7:1 ratio Yellow Jacket Gear Motor \(from goBILDA\)](../.gitbook/assets/image%20%2819%29.png)
 
 When developing ARC Thunder's robot for World Championships, we began using these motors to power some mechanisms. They have built-in encoders that work with both 3.3V and 5V, so no level shifter is needed in any scenario.
 

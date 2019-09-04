@@ -74,7 +74,7 @@ The [`Telemetry.log()`](http://ftctechnh.github.io/ftc_app/doc/javadoc/org/first
 
 Sometimes the Robot Controller app crashes without any useful information shown on the screen. Sometimes your code behaves erratically, and you would like to confirm a theory of a possible error using the value of a variable. In both situations, the most effective way to troubleshoot is to **debug** the program's execution. Since the Robot Controller app is debuggable, you can use the **Debug button** \(pictured below\) during upload to tell Android Studio to attach its debugger to the app.
 
-![Debugging Button \(from Android Developers\)](../.gitbook/assets/image%20%2813%29.png)
+![Debugging Button \(from Android Developers\)](../.gitbook/assets/image%20%2816%29.png)
 
 The debugger in Android Studio supports the following features:
 

@@ -18,3 +18,50 @@ Like the `DcMotor`, we can set the direction of a servo with `Servo.setDirection
 
 There are many situations where a servo that is capable of rotating 180 degrees has a smaller range during operation. The FTC SDK includes a method named `Servo.scaleRange`, which allows you to restrict a servo's operating range to a subset of its capable range. Using `scaleRange` also means that any position value that is passed to `setPosition` is scaled within the given range. For example, if you call `servo.scaleRange(0.3, 0.6)`, subsequently calling `servo.setPosition(1)` will cause the servo to rotate to a position value of $$0.6$$, and calling `servo.setPosition(0)` will cause the servo to rotate to a position value of $$0.3$$.
 
+## Examples
+
+The following annotated examples demonstrate how to interact with the `Servo` interface according to the expected behaviors above. Feel free to refer to FTC's [official samples](https://github.com/FIRST-Tech-Challenge/SkyStone/tree/master/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples) for more guidance.
+
+```java
+public class Demo {
+  private Servo servo;
+
+  // Setting servo position
+  public void setPosition() throws InterruptedException {
+    // Let the servo rotate to the angle corresponding to a position value of 0.6, or 108 degrees
+    servo.setPosition(0.6);
+    // Immediately, getPosition will return 0.6, regardless of whether the servo has actually reached that position
+    assert servo.getPosition() == 0.6;
+
+    // We can call Thread.sleep(...) to wait for the servo to reach the given position before moving on
+    Thread.sleep(500);
+  }
+
+  // Setting servo direction
+  public void setDirection() {
+    // Reverse the servo's range such that a position value x in the forward direction now corresponds ot 1-x in the reverse
+    servo.setDirection(Direction.REVERSE);
+    // Let the servo rotate to a position value of 0.2 (or 36 degrees) in the reverse direction
+    servo.setPosition(0.2);
+
+    // Set the servo's direction to FORWARD again
+    servo.setDirection(Direction.FORWARD);
+    // Let the servo rotate to a position value of 0.8 (or 180-36 degrees) in the forward direction
+    servo.setPosition(0.8);
+    // In the real world, this should not cause the servo to rotate to another angle compared to the previous setPosition(0.2) call
+  }
+
+  // Using Servo.scaleRange
+  public void scaleRange() {
+    // Scale position values 0-1 to a subrange of the servo's capable range from 0.2 to 0.6
+    servo.scaleRange(0.2, 0.6);
+    
+    // Let the servo rotate to a position value of 0, equivalent to 0.2 without the scaleRange call
+    servo.setPosition(0);
+
+    // Let the servo rotate to a position value of 0.8, equivalent to 0.52 without the scaleRange call
+    servo.setPosition(0.8);
+  }
+}
+```
+

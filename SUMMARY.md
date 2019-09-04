@@ -23,7 +23,6 @@
 
 * [The TeleOp Period](teleop-1/untitled.md)
 * [Accessing Gamepads](teleop-1/accessing-gamepads.md)
-* [Mapping from Input to Output](teleop-1/mapping-from-input-to-output.md)
 * [Finite State Machines](teleop-1/finite-state-machines.md)
 
 ## Autonomous <a id="autonomous-1"></a>
