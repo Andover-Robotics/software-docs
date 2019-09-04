@@ -49,14 +49,14 @@ FTC has become notorious for its disconnection problems. During [Relic Recovery 
 
 Refer to the [official examples](https://github.com/FIRST-Tech-Challenge/SkyStone/blob/master/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples/BasicOpMode_Iterative.java) for a demonstration. To define an OpMode in Java, simply follow the following steps:
 
-1. Make a new class for the OpMode, and let the class extend either `OpMode` or `LinearOpMode`. _\(See_ [_OpMode vs LinearOpMode_](opmode-vs-linearopmode.md) _for an explanation of these options\)_
-2. Annotate the class with either `@Autonomous` or `@TeleOp`. This will determine where your new OpMode will be found on the Driver Station interface. Select the option that is appropriate for your OpMode’s intended model of operation.
-3. Give the annotation parameters `name` and `group`. The `name` should uniquely identify the OpMode in a list of OpMode names. The value of the `group` parameter allows you to further organize OpModes; in the Driver Station interface, OpModes are first divided into two lists, one for OpModes marked with `@Autonomous` and one for those marked with `@TeleOp`. Then, each of these lists are also sorted alphabetically by `group`, and the OpModes within each `group` are sorted alphabetically by `name`. Thus, there are many options when it comes to organizing your OpModes. Always use a distinctive and descriptive `name` such that all of your team's drivers can easily distinguish the proper OpMode to run at any time without the assistance of programmers. By ARC convention, the value of `group` should be one of the following:
+1. Make a new class for the OpMode, and let the class extend either `OpMode` or `LinearOpMode`. _\(See_ [_OpMode vs LinearOpMode_](opmode-vs-linearopmode.md) _for an explanation of these options\)_ 
+2. Annotate the class with either `@Autonomous` or `@TeleOp`. This will determine where your new OpMode will be found on the Driver Station interface. Select the option that is appropriate for your OpMode’s intended model of operation. 
+3. Give the annotation parameters `name` and `group`. The `name` should uniquely identify the OpMode in a list of OpMode names. The value of the `group` parameter allows you to further organize OpModes; in the Driver Station interface, OpModes are first divided into two lists, one for OpModes marked with `@Autonomous` and one for those marked with `@TeleOp`. Then, each of these lists are also sorted alphabetically by `group`, and the OpModes within each `group` are sorted alphabetically by `name`. Thus, there are many options when it comes to organizing your OpModes. Always use a distinctive and descriptive `name` such that all of your team's drivers can easily distinguish the proper OpMode to run at any time without the assistance of programmers. By ARC convention, the value of `group` should be one of the following: 
    1. **“Competition”:** to denote that the current OpMode should be used during an actual competition
    2. **“Experimental”:** to denote that the current OpMode is used to experiment with untested or otherwise unfamiliar code
    3. **“Troubleshoot”:** to denote that the current OpMode is used to verify the operation of particular features, such as hardware devices.
-   4. **"Other":** for OpModes whose purpose is not covered by any of the options above.
-4. Declare the required abstract methods. For a `LinearOpMode`, the required method is `public void runOpMode()`; for an iterative `OpMode`, the required methods are `public void init()` and `public void loop()`. See [OpMode vs LinearOpMode](opmode-vs-linearopmode.md) for an explanation of these methods.
+   4. **"Other":** for OpModes whose purpose is not covered by any of the options above. 
+4. Declare the required abstract methods. For a `LinearOpMode`, the required method is `public void runOpMode()`; for an iterative `OpMode`, the required methods are `public void init()` and `public void loop()`. See [OpMode vs LinearOpMode](opmode-vs-linearopmode.md) for an explanation of these methods. 
 5. Fill the method bodies with desired logic.
 
 For a `LinearOpMode`, the empty definition should look like this:
@@ -97,6 +97,10 @@ public class MyOpMode extends OpMode {
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
+
+{% hint style="warning" %}
+We encourage you not to copy & paste from this guide. Typing the code out helps you memorize this structure and eliminate any dependence on this guide when creating new OpModes. Many competition venues do not allow access to the Internet in the pits, which means that you cannot always rely on this guide.
+{% endhint %}
 
 In the [next section](opmode-vs-linearopmode.md), you will discover the differences between these two paradigms of programming OpModes.
 
