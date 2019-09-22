@@ -46,5 +46,5 @@ Your knowledge of FTC software should not be limited by the scope of this guide.
 * \_\_[_Intro to Control Theory_ by Wesley Aptekar-Cassels](https://blog.wesleyac.com/posts/intro-to-control-part-zero-whats-this)
 * \_\_[_Controls Engineering in FRC_ by Tyler Veness](https://file.tavsys.net/control/state-space-guide.pdf)
 * [FTC Discord Server](https://discord.gg/first-tech-challenge)
-* [_Game Manual 0_](http://gm0.copr.cc/) by [Copperforge](http://copperforge.cc)
+* [_Game Manual 0_](http://gm0.copperforge.cc) by [Copperforge](http://copperforge.cc)
 

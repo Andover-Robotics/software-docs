@@ -1,2 +1,0 @@
-# Imperative Implementation
-

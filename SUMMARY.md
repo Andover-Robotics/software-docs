@@ -28,7 +28,6 @@
 ## Autonomous <a id="autonomous-1"></a>
 
 * [The Autonomous Period](autonomous-1/untitled.md)
-* [Imperative Implementation](autonomous-1/imperative-implementation.md)
 * [Computer Vision](autonomous-1/computer-vision.md)
 * [Motion Profiling](autonomous-1/motion-profiling.md)
 * [The Task System](autonomous-1/the-task-system.md)
