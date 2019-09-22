@@ -1,2 +1,2 @@
-# Minimize unnecessary writes
+# Minimize Redundant I/O
 
