@@ -10,7 +10,7 @@ In FTC, there are many situations in which you need to [confirm the value of a v
 
 The `OpMode` class contains a [public field](http://ftctechnh.github.io/ftc_app/doc/javadoc/com/qualcomm/robotcore/eventloop/opmode/OpMode.html#telemetry) named `telemetry`, which is where all telemetry actions are performed. Feel free to refer to the JavaDoc documentation for the `Telemetry` interface for more details.
 
-{% embed url="http://ftctechnh.github.io/ftc\_app/doc/javadoc/org/firstinspires/ftc/robotcore/external/Telemetry.html" caption="JavaDocs for the Telemetry interface" %}
+{% embed url="https://first-tech-challenge.github.io/SkyStone/doc/javadoc/org/firstinspires/ftc/robotcore/external/Telemetry.html" caption="Official JavaDocs for Telemetry" %}
 
 Telemetry works slightly differently compared to straightforward print statements. In telemetry, we build the driver station display line-by-line and then perform a bulk transmission to the Driver Station for this display to be shown. This mechanism takes into account the limited communication bandwidth between the Driver Station and the Robot Controller; to minimize disruption to the control system's other duties, there is a minimum time interval of 250 milliseconds between each bulk transmission of telemetry data. This is why the telemetry data shown on the Driver Station screen does not update very quickly. This mechanism will also affect how we write code for telemetry.
 

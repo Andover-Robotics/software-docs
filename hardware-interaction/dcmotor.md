@@ -8,7 +8,7 @@ In the world of FTC, the `DcMotor` is perhaps the most important type of electro
 
 The term `DcMotor` refers to the name of a class in the FTC SDK. This class describes a physical motor, an actuator that causes the rotation of an axle.
 
-{% embed url="https://ftctechnh.github.io/ftc\_app/doc/javadoc/com/qualcomm/robotcore/hardware/DcMotor.html" caption="JavaDocs for the DcMotor class" %}
+{% embed url="https://first-tech-challenge.github.io/SkyStone/doc/javadoc/com/qualcomm/robotcore/hardware/DcMotor.html" %}
 
 ## Our Motors
 

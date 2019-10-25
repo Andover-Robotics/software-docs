@@ -2,7 +2,7 @@
 
 Servos are rotating motors that can rotate their output axle within a semicircular range. For more specific information, ask a member of the build team or visit [ServoCity's introduction to Servos](https://www.servocity.com/what-is-a-servo). A physical servo is represented by an instance of the [`Servo`](https://ftctechnh.github.io/ftc_app/doc/javadoc/com/qualcomm/robotcore/hardware/Servo.html) class in the FTC SDK.
 
-{% embed url="https://ftctechnh.github.io/ftc\_app/doc/javadoc/com/qualcomm/robotcore/hardware/Servo.html" %}
+{% embed url="https://first-tech-challenge.github.io/SkyStone/doc/javadoc/com/qualcomm/robotcore/hardware/Servo.html" %}
 
 ## Servo Position
 

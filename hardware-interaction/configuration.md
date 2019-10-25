@@ -36,5 +36,5 @@ To retrieve instances of hardware devices using the active configuration, we use
 
 Refer to the `HardwareMap` class for how to obtain instances of more types of electronics.
 
-{% embed url="https://ftctechnh.github.io/ftc\_app/doc/javadoc/com/qualcomm/robotcore/hardware/HardwareMap.html" %}
+{% embed url="https://first-tech-challenge.github.io/SkyStone/doc/javadoc/com/qualcomm/robotcore/hardware/HardwareMap.html" %}
 
