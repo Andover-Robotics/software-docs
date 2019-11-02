@@ -92,6 +92,10 @@ As with Run Using Encoder, the power value in `RUN_TO_POSITION` is interpreted i
 
 To check whether the motor has reached the target position, call [`DcMotor.isBusy`](https://ftctechnh.github.io/ftc_app/doc/javadoc/com/qualcomm/robotcore/hardware/DcMotor.html#isBusy--). This method returns true if the motor is still on its way to the target position. Once the motor reaches the target position, it will start drawing whatever electrical current necessary to maintain that position, and `isBusy` will start returning false.
 
+{% hint style="warning" %}
+At the beginning of each OpMode, each motor begins with no target position set, and`getTargetPosition()` returns 0. The FTC SDK requires you to set a motor's target position to a certain value before setting its RunMode to `RUN_TO_POSITION` for the first time. Therefore, it is typically safer to call `setTargetPosition` before `setMode` when asking a motor to run to a certain position.
+{% endhint %}
+
 ## Examples
 
 The following annotated examples demonstrate how to use the `DcMotor` interface effectively. Feel free to refer to FTC's [official samples](https://github.com/FIRST-Tech-Challenge/SkyStone/tree/master/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples) for further guidance.
@@ -164,14 +168,15 @@ public class Demo {
 
   // Use the Run To Position mode
   public void runToPosition() {
-    // First, set the mode to RUN_TO_POSITION
-    motor.setMode(RunMode.RUN_TO_POSITION);
-    // Then, set the target position to a desired value
+    // First, set the target position to a desired value
     motor.setTargetPosition(1440 * 4); // 4 revolutions
+    // Then, set the mode to RUN_TO_POSITION
+    motor.setMode(RunMode.RUN_TO_POSITION);
     // Let the motor start rotating at the greatest angular velocity permitted in whatever direction necessary
     motor.setPower(1);
 
     // Wait for the motor to reach the target position
+    // (note: typically you need to check for isStopRequested as well)
     while (motor.isBusy());
 
     // Note: setting the power to 0 after the motor reaches the target position is not necessary
