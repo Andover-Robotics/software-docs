@@ -20,8 +20,7 @@ A `LinearOpMode` executes like any other computer program—the statements in `r
 
 One of the functions made available in `LinearOpMode` is [`isStopRequested`](http://ftctechnh.github.io/ftc_app/doc/javadoc/com/qualcomm/robotcore/eventloop/opmode/LinearOpMode.html#isStopRequested--), which returns true whenever the OpMode is requested to stop \(either by a timer or by pressing the Stop button\). This means that you can check it in every loop condition that the OpMode might execute in the course of its lifetime. This ensures that whenever the OpMode is asked to stop, your code can quickly escape the current state and finish its execution. Consider the following example:
 
-{% code-tabs %}
-{% code-tabs-item title="Unresponsive LinearOpMode Implementation" %}
+{% code title="Unresponsive LinearOpMode Implementation" %}
 ```java
 public void runOpMode() {
   liftMotor.setMode(RunMode.RUN_TO_POSITION);
@@ -33,8 +32,7 @@ public void runOpMode() {
   }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 On Line 5, the `while` loop's condition does not include whether the OpMode has stopped. As a result, when this program is stopped prematurely \(perhaps to prevent damage to the lift\), it will not respond, and an Emergency Stop will be issued.
 

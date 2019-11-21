@@ -34,8 +34,7 @@ When designing these paths, you must consider the robot's limitations of indepen
 
 The most common strategy for the Autonomous period is to perform a predetermined sequence of tasks, which can be easily achieved by writing a series of statements in the `runOpMode` method of a `LinearOpMode`. For example, consider the following OpMode definition:
 
-{% code-tabs %}
-{% code-tabs-item title="MyAuto.java" %}
+{% code title="MyAuto.java" %}
 ```java
 @Autonomous(name = "My Autonomous", group = "Competition")
 public class MyAuto extends LinearOpMode {
@@ -60,8 +59,7 @@ public class MyAuto extends LinearOpMode {
   }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 {% hint style="info" %}
 In this example, we are almost able to read the contents of `runOpMode` out loud and be understood as if we were speaking plain English. Instead of issuing raw numbers to individual hardware devices, this example describes the procedure in a high level of [abstraction](https://youtu.be/6V1sr0XV_Ng), so the technical details are hidden from those who don't need to know them. As your autonomous programs accumulate complexity over time, it is important to utilize abstraction in order to make your code more maintainable and readable to other programmers. Check out [_Integrate with your Team_](../working-with-a-team/integrate-with-your-team.md) for more tips on maximizing your code's cleanliness.

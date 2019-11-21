@@ -18,8 +18,7 @@ Telemetry works slightly differently compared to straightforward print statement
 
 In its simplest form, composing telemetry messages involves adding lines to the display by making calls to `Telemetry.addData` and then sending the display to the Driver Station by calling `Telemetry.update`. The following demonstrates this technique using [some autonomous code from Relic Recovery](https://github.com/ARC-Thunder/ftc_app/blob/fb933aa2e67ef65de2014ab9ac86163ee5bc9b01/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/AutonomousMethodMaster.java#L433-L438) by 5273.
 
-{% code-tabs %}
-{% code-tabs-item title="AutonomousMethodMaster.java" %}
+{% code title="AutonomousMethodMaster.java" %}
 ```java
 // Adds telemetry of the drive motors
 telemetry.addData("motorFL Pos", LPos);
@@ -28,8 +27,7 @@ telemetry.addData("motorFR Pos", RPos);
 // Updates the telemetry
 telemetry.update();
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 If `LPos` and `RPos` are both zero, executing this will cause the Driver Station to display the following information: 
 
@@ -48,8 +46,7 @@ Simply using `addData` in this manner is sufficient for most situations, but the
 
 If you would like multiple items to be shown in one line on the Driver Station, you can use the technique demonstrated below:
 
-{% code-tabs %}
-{% code-tabs-item title="From Telemetry JavaDoc" %}
+{% code title="From Telemetry JavaDoc" %}
 ```java
 telemetry.addLine()
      .addData("count", currentCount)
@@ -59,8 +56,7 @@ telemetry.addLine()
      .addData("orientation", "%s", getOrientation());
 telemetry.update();
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### Managing Existing Items
 

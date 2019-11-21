@@ -61,8 +61,7 @@ Refer to the [official examples](https://github.com/FIRST-Tech-Challenge/SkySton
 
 For a `LinearOpMode`, the empty definition should look like this:
 
-{% code-tabs %}
-{% code-tabs-item title="MyOpMode.java" %}
+{% code title="MyOpMode.java" %}
 ```java
 @Autonomous(name="Demo Auto", group="Experimental")
 // Or @TeleOp
@@ -73,13 +72,11 @@ public class MyOpMode extends LinearOpMode {
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 For an `OpMode`, the empty definition should look like this:
 
-{% code-tabs %}
-{% code-tabs-item title="MyOpMode.java" %}
+{% code title="MyOpMode.java" %}
 ```java
 @Autonomous(name="Demo Auto", group="Experimental")
 // Or @TeleOp
@@ -95,8 +92,7 @@ public class MyOpMode extends OpMode {
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 {% hint style="warning" %}
 We encourage you not to copy & paste from this guide. Typing the code out helps you memorize this structure and eliminate any dependence on this guide when creating new OpModes. Many competition venues do not allow access to the Internet in the pits, which means that you cannot always rely on this guide.

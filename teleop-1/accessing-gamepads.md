@@ -18,16 +18,14 @@ gamepad1.x
 
 Recall that in an iterative OpMode, the `loop()` method is executed repeatedly when the OpMode is running. Given that the values in `gamepad1` and `gamepad2` are constantly updated, we can conveniently relay the state of input columns to output devices. Consider the following example of a simple tank-drive control scheme implementation:
 
-{% code-tabs %}
-{% code-tabs-item title="Tank Drive Implementation" %}
+{% code title="Tank Drive Implementation" %}
 ```java
 public void loop() {
   leftMotor.setPower(-gamepad1.left_stick_y);
   rightMotor.setPower(-gamepad1.right_stick_y);
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 In this example, we simply pass the values of the fields of `gamepad1` to the two drivetrain motors repeatedly. Whenever a driver pushes the left stick forward, `leftMotor` receives a positive power value; whenever a driver pushes the right stick forward, `rightMotor` receives a positive power value.
 

@@ -35,15 +35,13 @@ To represent a Finite State Machine in Java, we need to define all possible **st
 
 We can naturally represent a finite number of states using an **enum** in Java. Each possible value of the enum corresponds to one possible state. For example, ARC Thunder codified all the possible states of _Thor_ into an enum named `TeleOpState`:
 
-{% code-tabs %}
-{% code-tabs-item title="TeleOpState.java" %}
+{% code title="TeleOpState.java" %}
 ```java
 public enum TeleOpState {
   CYCLE_COLLECT, CYCLE_TRANSFER, CYCLE_DELIVER, CYCLE_SCORE, ENDGAME, MANUAL
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 Then, in the main TeleOp OpMode, a field named `state` is defined and stores the currently active state.
 
@@ -51,8 +49,7 @@ Then, in the main TeleOp OpMode, a field named `state` is defined and stores the
 
 The most basic approach to the concept of state transitions uses a large `switch` statement that executes different code segments depending on the current state. Each `case` of the `switch` statement corresponds to one possible state, applies the control scheme of that state, and can make changes to the current state depending on certain conditions. This `switch` statement is executed repeatedly, so it belongs in the `loop()` method of an iterative OpMode. Consider the following example implementation for the turnstile diagram above:
 
-{% code-tabs %}
-{% code-tabs-item title="TurnstileSwitch.java" %}
+{% code title="TurnstileSwitch.java" %}
 ```java
 public abstract class TurnstileSwitch {
   private static enum TurnstileState {
@@ -82,8 +79,7 @@ public abstract class TurnstileSwitch {
   abstract boolean newPush();
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 In each iteration of `loop()`, the `switch` statement executes different branches depending on the current state. If the state is `LOCKED` and `newCoinEntered()` returns true, it changes the current state to `UNLOCKED`; if the state is `UNLOCKED` and `newPush()` returns true, it changes the current state to `LOCKED`.
 

@@ -38,8 +38,7 @@ Unlike the `LinearOpMode`, the \(iterative\) `OpMode` executes a specific method
 
 If it makes more sense to you, you can imagine an `OpMode` as a `LinearOpMode` with the following definition of `runOpMode()`:
 
-{% code-tabs %}
-{% code-tabs-item title="Executing an iterative OpMode" %}
+{% code title="Executing an iterative OpMode" %}
 ```java
 public void runOpMode() {
   init();
@@ -55,8 +54,7 @@ public void runOpMode() {
   stop();
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 For conventional TeleOp, we initialize our references to hardware devices in the `init()` method, and we send the received gamepad values to the output devices in the `loop()` method. FIRST's [example](https://github.com/FIRST-Tech-Challenge/SkyStone/blob/master/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples/BasicOpMode_Iterative.java) is an excellent reference for this paradigm.
 
