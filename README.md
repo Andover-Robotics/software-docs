@@ -4,18 +4,6 @@ description: Welcome! Let's make your robot smart.
 
 # Introduction
 
-{% code title="The FTC Programmer\'s Role" %}
-```java
-if (notWinning) {
-    blameTheProgrammers();
-} else if (mechanicalProblemOnRobot) {
-    yellToTheProgrammersAboutHowTheyAreUselessAndCannotDoAnything();
-} else {
-    giveTheProgrammersImpossibleDemands();
-}
-```
-{% endcode %}
-
 Welcome to the world of FTC Software! By programming your team's robot for even part of a season, you will surely bring your critical thinking, engineering, and problem solving skills to the next level. It can also direct you in your career or college major searching: from collaborative engineering to advanced control theory, coding in the FTC gives you a preview of the professional industry of innovative robotics and the application of programming skills in the physical world. Although learning the FTC coding process may seem like a daunting task, this guide is here to simplify the process and guide you \(and your team\) to a working robot ready to dominate the competition.
 
 This online guide serves as a parallel resource to the lessons that the Chief Software Officers host during club meetings. The lessons complement this guide by demonstrating the presented concepts using examples on real hardware.
