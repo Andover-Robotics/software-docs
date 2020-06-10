@@ -100,3 +100,8 @@ We encourage you not to copy & paste from this guide. Typing the code out helps 
 
 In the [next section](opmode-vs-linearopmode.md), you will discover the differences between these two paradigms of programming OpModes.
 
+## Check your Understanding
+
+1. What is an OpMode?
+2. Where can you select which OpMode to run?
+3. True or False: You do not need to create a new class in order to make a new OpMode.

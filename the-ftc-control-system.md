@@ -1,5 +1,5 @@
 ---
-description: 'It consists of a phone, a hardware hub, and another phone.'
+description: 'It consists of a phone, an electronics hub, and another phone.'
 ---
 
 # The FTC Control System
@@ -50,30 +50,9 @@ The **JST VH** connector connects REV Expansion Hubs to various 12V motors. They
 
 Hardware controllers act as the middleman between the Robot Controller and the individual hardware devices. We connect the Robot Controller to one or more hardware controllers, which connect to specific motors, servos, and sensors.
 
-As of 2019-2020, ARC has two types of hardware controllers: Modern Robotics and REV Expansion Hubs.
+As of 2020-2021, ARC has one main type of hardware controller: REV Expansion Hubs.
 
-### Modern Robotics
-
-![Parts included in the MR Robot Electronics Bundle \(from official website\)](.gitbook/assets/image%20%288%29.png)
-
-Despite its optimistic name, Modern Robotics \(MR\) electronics components [will become illegal in the 2020-2021 season](http://firsttechchallenge.blogspot.com/2019/06/first-tech-challenge-technology-updates.html). ARC has primarily relied on these for the past three years, so we have them in great abundance. There are four types of controllers in the Modern Robotics system:
-
-* The [**Core Power Distribution Module**](https://modernroboticsinc.com/product/core-power-distribution-module/) is where the Robot Controller phone and the 12V robot battery are connected to the robot's electronics. It has the following parts:
-  * 6 Powerpole connectors for power distribution
-  * 6 USB ports for the delivery of control commands
-  * A built-in power switch
-  * A built-in fuse
-  * A Tamiya connector that connects to the 12V battery
-  * A female Mini-USB port that connects to the Robot Controller
-* The [**Core Motor Controller**](https://modernroboticsinc.com/product/core-motor-controller/) allows motors to be connected and controlled by the Core Power Distribution Module. Each Core Motor Controller has two Powerpole connectors and two 4-pin encoder connectors that connect to two motors. It also has a third Powerpole connector and a mini-USB port that connect to the Core Power Distribution Module.
-* The [**Core Servo Controller**](https://modernroboticsinc.com/product/core-servo-controller/) allows servos to be connected and controlled by the Core Power Distribution Module. Each Core Servo Controller has six 3-pin connectors that connect to up to six servos. It also has a third Powerpole connector and a mini-USB port that connect to the Core Power Distribution Module.
-* The [**Core Device Interface**](https://modernroboticsinc.com/product/core-device-interface-module/) connects various sensors to the Core Power Distribution Module. Check MR's website for more information.
-
-All electronics in the Modern Robotics system \(except motors\) run at 5 volts. This is the most common voltage rating found in our numerous electronic peripherals.
-
-{% embed url="https://youtu.be/E6bOTkQWaTI" %}
-
-## REV Expansion Hub
+### REV Expansion Hub
 
 ![Diagram of connections for the REV Expansion Hub \(from official wiki\)](.gitbook/assets/image%20%2811%29.png)
 
@@ -90,4 +69,8 @@ REV's [official guide to the Expansion Hub](https://www.revrobotics.com/content/
 {% embed url="https://youtu.be/fU1GXteByJw" %}
 
 
+## Check your Understanding
 
+1. What's the difference between the Robot Controller and the Driver Station?
+2. What is the most popular delivery connector in FTC?
+3. What is the name of the hardware controller used in ARC?

@@ -58,3 +58,8 @@ public void runOpMode() {
 
 For conventional TeleOp, we initialize our references to hardware devices in the `init()` method, and we send the received gamepad values to the output devices in the `loop()` method. FIRST's [example](https://github.com/FIRST-Tech-Challenge/SkyStone/blob/master/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples/BasicOpMode_Iterative.java) is an excellent reference for this paradigm.
 
+## Check your Understanding
+
+1. How is an Iterative OpMode different from a Linear OpMode?
+2. True or False: Not all autonomous OpModes have to be linear.
+3. How many standard methods are in a typical Iterative OpMode?

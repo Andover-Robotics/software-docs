@@ -183,4 +183,8 @@ public class Demo {
   }
 }
 ```
+## Check your Understanding
 
+1. What is a DCMotor?
+2. What are the possible direction values for a DCMotor?
+3. What is the difference between the RUN_TO_POSITION and RUN_USING_ENCODER modes?

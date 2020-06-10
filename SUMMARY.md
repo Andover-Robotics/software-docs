@@ -21,7 +21,7 @@
 
 ## TeleOp <a id="teleop-1"></a>
 
-* [The TeleOp Period](teleop-1/untitled.md)
+* [The TeleOp Period](teleop-1/the-teleop-period.md)
 * [Accessing Gamepads](teleop-1/accessing-gamepads.md)
 * [Finite State Machines](teleop-1/finite-state-machines.md)
 

@@ -20,7 +20,8 @@ In its simplest form, composing telemetry messages involves adding lines to the 
 
 {% code title="AutonomousMethodMaster.java" %}
 ```java
-// Adds telemetry of the drive motors
+// Adds telemetry of the drive mot
+ors
 telemetry.addData("motorFL Pos", LPos);
 telemetry.addData("motorFR Pos", RPos);
 
@@ -81,7 +82,11 @@ The debugger in Android Studio supports the following features:
 
 For a more comprehensive reference, visit [Android's debugging documentation](https://developer.android.com/studio/debug) and [IntelliJ IDEA's debugging documentation](https://www.jetbrains.com/help/idea/debugging-code.html). Remember that Android Studio is based on IntelliJ IDEA.
 
+## Check your Understanding
 
+1. Why do we use telemetry?
+2. When do you need to add telemetry.update()?
+3. What are the functionalities of the Android Studio debugger?
 
 
 

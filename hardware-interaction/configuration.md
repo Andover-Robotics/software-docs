@@ -38,3 +38,8 @@ Refer to the `HardwareMap` class for how to obtain instances of more types of el
 
 {% embed url="https://first-tech-challenge.github.io/SkyStone/doc/javadoc/com/qualcomm/robotcore/hardware/HardwareMap.html" %}
 
+## Check your Understanding
+
+1. Why do we need configuration?
+2. What is the common method to connect 2 expansion hubs?
+3. What is the name of the class that helps you retrieve devices from Configuration?
