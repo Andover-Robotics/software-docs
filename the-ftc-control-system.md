@@ -70,7 +70,7 @@ REV's [official guide to the Expansion Hub](https://www.revrobotics.com/content/
 
 ## Check your Understanding
 
-1. What's the difference between the Robot Controller and the Driver Station?
-2. What is the most popular delivery connector in FTC?
+1. What's the difference between the Robot Controller and the Driver Station? What are their respective roles?
+2. How do control signals travel from the driver's joystick to the motors on the robot? Describe the entire process.
 3. What is the name of the hardware controller used in ARC?
 

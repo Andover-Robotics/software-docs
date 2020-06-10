@@ -71,7 +71,7 @@ Since the angle output is constrained to $$[-180, 180]$$ or $$[-\pi, \pi]$$, the
 {% hint style="info" %}
 Q: Why do we have to use `firstAngle` to refer to the heading? If we need to access the Z-axis, couldn't we have `AxesOrder.XYZ` and use `thirdAngle`?
 
-A: We have chosen `firstAngle` as our convention because of Road Runner. Road Runner Quickstart's FTC integration classes implement the `getExternalHeading` method by accessing the `firstAngle` of the input `Orientation`. It is a good idea to share the `BNO055IMU` instance used by Road Runner To minimize ambiguity and hide the implementation details of `Orientation`, you are free to wrap the access logic in your own class.
+A: We have chosen `firstAngle` as our convention because of Road Runner. Road Runner Quickstart's FTC integration classes implement the `getExternalHeading` method by accessing the `firstAngle` of the input `Orientation`. It is a good idea to share the `BNO055IMU` instance used by Road Runner, since it is redundant to initialize another instance during a match. To minimize ambiguity and hide the implementation details of `Orientation`, you are free to wrap the access logic in your own class.
 {% endhint %}
 
 For a complete reference of the `BNO055IMU` class, check out the following source file from OpenFTC. Since the class is technically not part of the official `org.firstinspires` packages, you cannot find it in the official JavaDocs. Instead, you can read the inline JavaDoc source located in its extracted source file below:

@@ -28,7 +28,7 @@ Recently, the club has obtained many Neverest Gearmotors for more rigorous use c
 
 ![A 13.7:1 ratio Yellow Jacket Gear Motor \(from goBILDA\)](../.gitbook/assets/image%20%2819%29.png)
 
-When developing ARC Thunder's robot for World Championships, we began using these motors to power some mechanisms. They have built-in encoders that work with both 3.3V and 5V, so no level shifter is needed in any scenario.
+When developing ARC Thunder's robot for World Championships, we began using these motors to power some mechanisms. They have built-in encoders that work with both 3.3V and 5V, so no level shifter is needed in any scenario. ARC has Yellow Jacket Gear Motors in several gear ratios, meaning that there is a wide range of proportions between speed and torque when selecting these motors. As of the 2020-2021 season, the Yellow Jacket Gear Motor is projected to become the club's default motor choice.
 
 ## Basic Behavior
 
@@ -186,7 +186,6 @@ public class Demo {
 
 ## Check your Understanding
 
-1. What is a DCMotor?
-2. What are the possible direction values for a DCMotor?
-3. What is the difference between the RUN\_TO\_POSITION and RUN\_USING\_ENCODER modes?
-
+1. What are two ways to ensure that a motor uses power to hold its output shaft still?
+2. What are the steps necessary to let a motor begin to run to a specific target position?
+3. Suppose you have a typical tank drive drivetrain, with two motors facing opposite directions and powering traction wheels. You supply a power value of 1 to both motors, but the robot turns in place instead of moving forward. How could you fix this problem without changing the power values supplied to each motor?

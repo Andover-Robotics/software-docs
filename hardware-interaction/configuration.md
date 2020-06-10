@@ -41,6 +41,5 @@ Refer to the `HardwareMap` class for how to obtain instances of more types of el
 ## Check your Understanding
 
 1. Why do we need configuration?
-2. What is the common method to connect 2 expansion hubs?
-3. What is the name of the class that helps you retrieve devices from Configuration?
-
+2. What are the steps necessary to connect two REV Expansion Hubs?
+3. What is the name of the class that helps you retrieve hardware devices from configuration in code?

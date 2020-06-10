@@ -68,6 +68,5 @@ public class Demo {
 ## Check your Understanding
 
 1. Why do we use servos?
-2. What is the range of motion of a servo?
-3. How many possible directions does a servo have?
-
+2. What is the range of motion of a standard servo?
+3. What, precisely, does `Servo.getPosition` return as a servo rotates to a target position?
