@@ -42,15 +42,15 @@ If it makes more sense to you, you can imagine an `OpMode` as a `LinearOpMode` w
 ```java
 public void runOpMode() {
   init();
-  
+
   while (!isStarted())
     init_loop();
-    
+
   start();
-  
+
   while (!isStopRequested())
     loop();
-    
+
   stop();
 }
 ```
@@ -63,3 +63,4 @@ For conventional TeleOp, we initialize our references to hardware devices in the
 1. How is an Iterative OpMode different from a Linear OpMode?
 2. True or False: Not all autonomous OpModes have to be linear.
 3. How many standard methods are in a typical Iterative OpMode?
+

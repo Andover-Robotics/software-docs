@@ -13,13 +13,13 @@ The **Inertial Measurement Unit** of a REV Expansion Hub is an electronic device
 Although the IMU is capable of measuring linear acceleration, it is not optimal for measuring displacement due to inaccuracies. Consider a scenario where a robot stays at rest. The measured linear acceleration is supposed to be 0, but it may fluctuate around 0 due to signal noise, causing minor changes in velocity that in turn causes the calculated displacement to deviate from the resting position at a steady rate. When the robot accelerates, inaccuracies like these add up over time, reducing the usefulness of the displacement measurements. **Do not rely on linear acceleration measurements from the IMU for displacement feedback.**
 {% endhint %}
 
-**The IMU is [useful](https://github.com/OpenFTC/OpenRC-Turbo/blob/324ed36fa4c1adb305c026f52b746acd4692e88a/Hardware/src/main/java/com/qualcomm/hardware/bosch/BNO055IMU.java#L71) for rotation feedback**, so you can use its angular orientation measurements to help your robot execute perfect turns during autonomous. You can also use the IMU to enable field-centric movement control during TeleOp, which may reduce driver cognitive workload for certain applications and improve scoring performance.
+**The IMU is** [**useful**](https://github.com/OpenFTC/OpenRC-Turbo/blob/324ed36fa4c1adb305c026f52b746acd4692e88a/Hardware/src/main/java/com/qualcomm/hardware/bosch/BNO055IMU.java#L71) **for rotation feedback**, so you can use its angular orientation measurements to help your robot execute perfect turns during autonomous. You can also use the IMU to enable field-centric movement control during TeleOp, which may reduce driver cognitive workload for certain applications and improve scoring performance.
 
 ## Dimensions
 
-The following video from FIRST demonstrates how each rotational axis (heading, roll, and pitch) corresponds to the physical dimensions of the REV Expansion Hub.
+The following video from FIRST demonstrates how each rotational axis \(heading, roll, and pitch\) corresponds to the physical dimensions of the REV Expansion Hub.
 
-{% embed url="https://youtu.be/eN7fQnQ8zeg" %}
+{% embed url="https://youtu.be/eN7fQnQ8zeg" caption="" %}
 
 ## Usage
 
@@ -43,8 +43,6 @@ params.angleUnit = BNO055IMU.AngleUnit.DEGREES;
 // Initialize the IMU with your parameters
 imu.initialize(params);
 ```
-
-<!-- Author's note: Since the official JavaDocs indicated that manual calibration is not necessary for proper operation, I chose to omit it from this guide. The only perceivable benefit of manual calibration is a reduction in time spent initializing. Additionally, having to save a separate calibration file for each hub introduces excessive complexity. -->
 
 ### Reading Angles
 
@@ -78,10 +76,11 @@ A: We have chosen `firstAngle` as our convention because of Road Runner. Road Ru
 
 For a complete reference of the `BNO055IMU` class, check out the following source file from OpenFTC. Since the class is technically not part of the official `org.firstinspires` packages, you cannot find it in the official JavaDocs. Instead, you can read the inline JavaDoc source located in its extracted source file below:
 
-{% embed url="https://github.com/OpenFTC/OpenRC-Turbo/blob/324ed36fa4c1adb305c026f52b746acd4692e88a/Hardware/src/main/java/com/qualcomm/hardware/bosch/BNO055IMU.java" %}
+{% embed url="https://github.com/OpenFTC/OpenRC-Turbo/blob/324ed36fa4c1adb305c026f52b746acd4692e88a/Hardware/src/main/java/com/qualcomm/hardware/bosch/BNO055IMU.java" caption="" %}
 
 ## Check Your Understanding
 
 1. What IMU measurement is the most useful in FTC? How could you use this measurement to improve performance?
-2. If you are currently working on a robot, which axis (X, Y, or Z) of the Expansion Hub corresponds to the robot's heading?
+2. If you are currently working on a robot, which axis \(X, Y, or Z\) of the Expansion Hub corresponds to the robot's heading?
 3. Given an initialized `BNO055IMU` instance assigned to a field named `imu`, retrieve the X-axis angular orientation reading in degrees and normalize it to the range $$[0, 360]$$.
+

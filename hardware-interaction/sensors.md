@@ -32,7 +32,7 @@ These return the amount of red, green, and blue, respectively, that the sensor i
 
 ### `.alpha()`
 
-This returns the amount of light the sensor is currently detecting as an integer. 
+This returns the amount of light the sensor is currently detecting as an integer.
 
 ### `.argb()`
 
@@ -46,4 +46,5 @@ To learn more about sensors, you can use the code examples found in the `FtcRobo
 
 1. Why do we use sensors?
 2. Can you provide an example of a game challenge that could be solved with a Color Sensor?
-3. What does the .alpha() method do?
+3. What does the .alpha\(\) method do?
+

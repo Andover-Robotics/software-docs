@@ -18,7 +18,7 @@ FIRST provides numerous example OpModes in the FtcRobotController app. They are 
 
 ### Normal Flow
 
-Each OpMode you create can be found as a menu option on the Driver Station app. Above the circular button, two dropdown options are available on both sides of the OpMode selection menu, denoting TeleOp and Autonomous respectively. Each dropdown menu contains the names of all the declared OpModes in its category.  Once you select the desired OpMode and press _INIT_, an object belonging to its class is instantiated, and either `runOpMode` or `init` is executed.
+Each OpMode you create can be found as a menu option on the Driver Station app. Above the circular button, two dropdown options are available on both sides of the OpMode selection menu, denoting TeleOp and Autonomous respectively. Each dropdown menu contains the names of all the declared OpModes in its category. Once you select the desired OpMode and press _INIT_, an object belonging to its class is instantiated, and either `runOpMode` or `init` is executed.
 
 When setting up the robot on the field, one member of the drive team selects the desired Autonomous OpMode and presses _INIT_. **We recommend that your Autonomous OpModes use** [**telemetry**](telemetry-and-debugging.md) **to inform the drive team when it is fully initialized and whether any errors have occurred**; the drive team may not touch the Driver Station screen nor enter the field after signalling to the referee that it is ready. Before autonomous begins, the OpMode will stay initialized. Once autonomous begins, the drive coach presses Play \(▶\), and the OpMode continues to execute. If the current OpMode belongs to the Autonomous category, an automatic 30-second timer can stop the OpMode once the Autonomous period ends; this timer is shown to the right of the circular button.
 
@@ -85,7 +85,7 @@ public class MyOpMode extends OpMode {
     public void init() {
         // Code to initialize
     }
-    
+
     @Override
     public void loop() {
         // Code to iterate
@@ -105,3 +105,4 @@ In the [next section](opmode-vs-linearopmode.md), you will discover the differen
 1. What is an OpMode?
 2. Where can you select which OpMode to run?
 3. True or False: You do not need to create a new class in order to make a new OpMode.
+

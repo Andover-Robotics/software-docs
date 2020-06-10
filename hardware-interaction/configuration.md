@@ -14,7 +14,7 @@ One REV Expansion Hub only provides four motor ports, and that is not sufficient
 
 Most of the existing Expansion Hubs in the club should be configured for daisy-chaining already, but if we decide to obtain more, refer to FTC's official [control system documentation](https://github.com/ftctechnh/ftc_app/wiki/Using-Two-Expansion-Hubs) for how to configure them. Alternatively, you may reference the following video.
 
-{% embed url="https://youtu.be/7rbLDden-Rs" %}
+{% embed url="https://youtu.be/7rbLDden-Rs" caption="" %}
 
 ## Making a Configuration
 
@@ -36,10 +36,11 @@ To retrieve instances of hardware devices using the active configuration, we use
 
 Refer to the `HardwareMap` class for how to obtain instances of more types of electronics.
 
-{% embed url="https://first-tech-challenge.github.io/SkyStone/doc/javadoc/com/qualcomm/robotcore/hardware/HardwareMap.html" %}
+{% embed url="https://first-tech-challenge.github.io/SkyStone/doc/javadoc/com/qualcomm/robotcore/hardware/HardwareMap.html" caption="" %}
 
 ## Check your Understanding
 
 1. Why do we need configuration?
 2. What is the common method to connect 2 expansion hubs?
 3. What is the name of the class that helps you retrieve devices from Configuration?
+

@@ -30,7 +30,7 @@ telemetry.update();
 ```
 {% endcode %}
 
-If `LPos` and `RPos` are both zero, executing this will cause the Driver Station to display the following information: 
+If `LPos` and `RPos` are both zero, executing this will cause the Driver Station to display the following information:
 
 **motorFL Pos : 0  
 motorFR Pos : 0**
@@ -85,8 +85,6 @@ For a more comprehensive reference, visit [Android's debugging documentation](ht
 ## Check your Understanding
 
 1. Why do we use telemetry?
-2. When do you need to add telemetry.update()?
+2. When do you need to add telemetry.update\(\)?
 3. What are the functionalities of the Android Studio debugger?
-
-
 

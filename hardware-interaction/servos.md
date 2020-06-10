@@ -2,7 +2,7 @@
 
 Servos are rotating motors that can rotate their output axle within a semicircular range. For more specific information, ask a member of the build team or visit [ServoCity's introduction to Servos](https://www.servocity.com/what-is-a-servo). A physical servo is represented by an instance of the [`Servo`](https://ftctechnh.github.io/ftc_app/doc/javadoc/com/qualcomm/robotcore/hardware/Servo.html) class in the FTC SDK.
 
-{% embed url="https://first-tech-challenge.github.io/SkyStone/doc/javadoc/com/qualcomm/robotcore/hardware/Servo.html" %}
+{% embed url="https://first-tech-challenge.github.io/SkyStone/doc/javadoc/com/qualcomm/robotcore/hardware/Servo.html" caption="" %}
 
 ## Servo Position
 
@@ -55,7 +55,7 @@ public class Demo {
   public void scaleRange() {
     // Scale position values 0-1 to a subrange of the servo's capable range from 0.2 to 0.6
     servo.scaleRange(0.2, 0.6);
-    
+
     // Let the servo rotate to a position value of 0, equivalent to 0.2 without the scaleRange call
     servo.setPosition(0);
 
@@ -70,3 +70,4 @@ public class Demo {
 1. Why do we use servos?
 2. What is the range of motion of a servo?
 3. How many possible directions does a servo have?
+

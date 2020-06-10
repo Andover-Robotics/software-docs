@@ -8,7 +8,7 @@ In the world of FTC, the `DcMotor` is perhaps the most important type of electro
 
 The term `DcMotor` refers to the name of a class in the FTC SDK. This class describes a physical motor, an actuator that causes the rotation of an axle.
 
-{% embed url="https://first-tech-challenge.github.io/SkyStone/doc/javadoc/com/qualcomm/robotcore/hardware/DcMotor.html" %}
+{% embed url="https://first-tech-challenge.github.io/SkyStone/doc/javadoc/com/qualcomm/robotcore/hardware/DcMotor.html" caption="" %}
 
 ## Our Motors
 
@@ -44,7 +44,7 @@ This combination of power and direction to determine the actual direction of rot
 
 ## Zero Power Behavior
 
-{% embed url="https://ftctechnh.github.io/ftc\_app/doc/javadoc/com/qualcomm/robotcore/hardware/DcMotor.ZeroPowerBehavior.html" %}
+{% embed url="https://ftctechnh.github.io/ftc\_app/doc/javadoc/com/qualcomm/robotcore/hardware/DcMotor.ZeroPowerBehavior.html" caption="" %}
 
 FTC motors allow you to customize their behavior when the power given is 0. The **brake** option tells the motor to actively resist any rotational motion when the power is 0, whereas the **float** option simply cuts power from the motor and allows external forces to accelerate or decelerate rotation with minimal resistance.
 
@@ -183,8 +183,10 @@ public class Demo {
   }
 }
 ```
+
 ## Check your Understanding
 
 1. What is a DCMotor?
 2. What are the possible direction values for a DCMotor?
-3. What is the difference between the RUN_TO_POSITION and RUN_USING_ENCODER modes?
+3. What is the difference between the RUN\_TO\_POSITION and RUN\_USING\_ENCODER modes?
+

@@ -66,11 +66,11 @@ Many of our motors have encoders that require 5 volts to function. Our NeveRest 
 
 REV's [official guide to the Expansion Hub](https://www.revrobotics.com/content/docs/REV-31-1153-GS.pdf) is a great reference for peripheral compatibility and troubleshooting purposes.
 
-{% embed url="https://youtu.be/fU1GXteByJw" %}
-
+{% embed url="https://youtu.be/fU1GXteByJw" caption="" %}
 
 ## Check your Understanding
 
 1. What's the difference between the Robot Controller and the Driver Station?
 2. What is the most popular delivery connector in FTC?
 3. What is the name of the hardware controller used in ARC?
+
