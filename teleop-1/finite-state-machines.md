@@ -6,6 +6,8 @@ description: >-
 
 # Finite State Machines
 
+## Definition
+
 A **Finite State Machine** is a computational pattern where the system is in one of a **finite** number of possible **states** at any moment. For a concrete example, consider the following **state diagram**:
 
 ![Simple state diagram for a turnstile \(Chetvorno, via Wikimedia Commons\)](../.gitbook/assets/image%20%2814%29.png)

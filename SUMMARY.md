@@ -31,7 +31,6 @@
 * [The Autonomous Period](autonomous-1/untitled.md)
 * [Computer Vision](autonomous-1/computer-vision.md)
 * [Motion Profiling](autonomous-1/motion-profiling.md)
-* [Tips from Experience](autonomous-1/tips-from-experience.md)
 
 ## Optimizations <a id="optimizations-1"></a>
 
