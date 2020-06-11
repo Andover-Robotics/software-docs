@@ -189,3 +189,4 @@ public class Demo {
 1. What are two ways to ensure that a motor uses power to hold its output shaft still?
 2. What are the steps necessary to let a motor begin to run to a specific target position?
 3. Suppose you have a typical tank drive drivetrain, with two motors facing opposite directions and powering traction wheels. You supply a power value of 1 to both motors, but the robot turns in place instead of moving forward. How could you fix this problem without changing the power values supplied to each motor?
+

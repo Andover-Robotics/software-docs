@@ -1,8 +1,10 @@
 # Accessing Gamepads
 
-> **Relay driver inputs to robot hardware as quickly as possible**
+## Reading the Gamepad
 
-To perform this TeleOp OpMode duty, your code needs to be able to read inputs from the driver's handheld controllers in real time. This is accomplished by accessing the fields of two instances of `Gamepad` in the `TeleOp` class: `gamepad1` and `gamepad2`. These fields correspond to the _User 1_ and _User 2_ registrations on the Driver Station; see FTC's [wiki page](https://github.com/FIRST-Tech-Challenge/SkyStone/wiki/Creating-and-Running-an-Op-Mode-%28Android-Studio%29#running-your-op-mode-with-a-gamepad-connected) on how these registrations work.
+To perform in TeleOp, your code needs to be able to read inputs from the driver's handheld controllers in real time. This is accomplished by accessing the fields of two instances of  the`Gamepad class` in the `TeleOp` class: `gamepad1` and `gamepad2`. Both of these fields will have been initialized by the FTC Robot Controller app while the program is initializing, so you do not have to worry about their initialization and may program under the assumption that they are non-null instances of the `Gamepad` class. 
+
+How do you know which controller is `gamepad1` and which is `gamepad2`? These fields correspond to the _User 1_ and _User 2_ registrations on the Driver Station, which may be set up by the drivers on the FTC Driver Station app before the program is initialized; see FTC's [wiki page](https://github.com/FIRST-Tech-Challenge/SkyStone/wiki/Creating-and-Running-an-Op-Mode-%28Android-Studio%29#running-your-op-mode-with-a-gamepad-connected) on how these registrations work.
 
 {% embed url="https://ftctechnh.github.io/ftc\_app/doc/javadoc/com/qualcomm/robotcore/hardware/Gamepad.html" caption="JavaDocs for the Gamepad class" %}
 
@@ -13,6 +15,18 @@ Notice how each control column on a standard Gamepad is reflected with a field i
 ```java
 gamepad1.x
 ```
+
+Different inputs on controllers will correspond to different data types. Knowing which field of the `Gamepad` class will result in which data type is essential to a functioning TeleOp.
+
+The controllers' buttons-X, A, B, Y, Back, and Stop-are **booleans**. Thus, `gamepad1.x`, `gamepad1.a`, `gamepad1.b`, `gamepad1.y`, `gamepad1.back`,  and`gamepad1.start`, respectively, will be `true` if the button is pressed and `false` otherwise.
+
+The left and right bumpers, too, are **booleans**. Thus, `gamepad1.left_bumper` and `gamepad1.right_bumper`  will be `true` if the bumper is pressed and `false` otherwise. 
+
+The x and y axes values of each joystick is a **double, ranging between -1 and 1.** The **center** of an axis is at the value **0**. The x and y values of the left and right sticks may be read from the following fields: `gamepad1.left_stick_x`, `gamepad1.left_stick_y`, `gamepad1.right_stick_x`, and`gamepad1.right_stick_y`. If the joysticks were in the positions shown in the image above, all four of these expressions would evaluate to 0. 
+
+The values of the left and right triggers, too, are **doubles, ranging between 0 and 1.** `gamepad1.left_trigger` and `gamepad1.right_trigger` would give 0 if the triggers were unpressed, 1 if they were pressed fully to the ground, and a decimal value in between the two if the trigger were not fully pressed.
+
+Finally, the D-pad buttons give **boolean** values. `gamepad1.dpad_up`, `gamepad1.dpad_right`, `gamepad1.dpad_down`, and `gamepad1.dpad_left` will each give true if the corresponding region of the dpad is pressed and false otherwise.
 
 ## Relaying Inputs in an iterative OpMode
 

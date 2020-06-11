@@ -21,8 +21,9 @@
 
 ## TeleOp <a id="teleop-1"></a>
 
-* [The TeleOp Period](teleop-1/the-teleop-period.md)
+* [FTC Match Structure](teleop-1/ftc-match-structure.md)
 * [Accessing Gamepads](teleop-1/accessing-gamepads.md)
+* [The TeleOp Period](teleop-1/the-teleop-period.md)
 * [Finite State Machines](teleop-1/finite-state-machines.md)
 
 ## Autonomous <a id="autonomous-1"></a>

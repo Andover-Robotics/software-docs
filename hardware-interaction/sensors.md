@@ -47,3 +47,4 @@ To learn more about sensors, you can use the code examples found in the `FtcRobo
 1. Why do we use sensors?
 2. Can you provide an example of a game challenge that could be solved with a Color Sensor?
 3. What does the `.alpha()` method do?
+
