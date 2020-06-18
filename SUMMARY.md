@@ -35,6 +35,7 @@
 ## Virtual Robot Environment <a id="virtual-robot-environment"></a>
 
 * [Setting Up The Virtual Robot Environment](virtual-robot-environment/setting-it-up.md)
+* [Programming a Mecanum Drive](virtual-robot-environment/programming-a-mecanum-drive.md)
 
 ## Working with a Team
 
