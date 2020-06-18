@@ -32,6 +32,10 @@
 * [Computer Vision](autonomous-1/computer-vision.md)
 * [Motion Profiling](autonomous-1/motion-profiling.md)
 
+## Virtual Robot Environment <a id="virtual-robot-environment"></a>
+
+* [Setting Up The Virtual Robot Environment](virtual-robot-environment/setting-it-up.md)
+
 ## Optimizations <a id="optimizations-1"></a>
 
 * [Why Optimize?](optimizations-1/premature-optimization.md)
