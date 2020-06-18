@@ -58,9 +58,11 @@ Run the code using the toolbar’s play button in the top right corner.
 ![](../.gitbook/assets/toolbar.png)
 
 You should see the following:
+
 ![](../.gitbook/assets/simulator.png)
 
 Since we coded a mecanum driving opmode, select “mechanum driving opmode” from the dropdown menu.
+
 ![Choosing the OpMode](../.gitbook/assets/choosing-opmode.png)
 
 Next, init and start the simulator. At the bottom are your left and right joysticks, along with the gamepad’s buttons. If your code is working properly, you should be able to drive around with the left joystick, and rotate left and right using the right one. Play around with it!
