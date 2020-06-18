@@ -36,26 +36,8 @@
 
 * [Setting Up The Virtual Robot Environment](virtual-robot-environment/setting-it-up.md)
 
-## Optimizations <a id="optimizations-1"></a>
-
-* [Why Optimize?](optimizations-1/premature-optimization.md)
-* [Cycle Rate](optimizations-1/cycle-rate.md)
-* [REV Bulk Reads](optimizations-1/rev-bulk-reads.md)
-* [Minimize Redundant I/O](optimizations-1/minimize-unnecessary-writes.md)
-* [Tools for Faster Development](optimizations-1/tools-for-faster-development.md)
-
 ## Working with a Team
 
 * [Integrate with your Team](working-with-a-team/integrate-with-your-team.md)
 * [Using Git Effectively](working-with-a-team/using-git-effectively.md)
-* [Interdisciplinary Knowledge](working-with-a-team/interdisciplinary-knowledge.md)
-
-## ARC Core
-
-* [Overview of ARC Core](arc-core/overview-of-arc-core.md)
-* [DriveTrain](arc-core/drivetrain.md)
-* [Configuration](arc-core/configuration.md)
-* [Task System](arc-core/task-system.md)
-* [Optimization Helpers](arc-core/optimization-helpers.md)
-* [ARC Toolbox](arc-core/arc-toolbox.md)
 
