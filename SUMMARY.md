@@ -29,8 +29,6 @@
 ## Autonomous <a id="autonomous-1"></a>
 
 * [The Autonomous Period](autonomous-1/untitled.md)
-* [Computer Vision](autonomous-1/computer-vision.md)
-* [Motion Profiling](autonomous-1/motion-profiling.md)
 
 ## Virtual Robot Environment <a id="virtual-robot-environment"></a>
 
