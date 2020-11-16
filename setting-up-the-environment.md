@@ -33,9 +33,9 @@ The club has struggled in using Git in the past _\(we have literally spent full 
 
 Git is a distributed version control system—that is, each collaborator keeps their own copy of the repository. To make your own copy, follow our [guide](https://github.com/Andover-Robotics/ARC-Core/wiki/Introduction) from Rover Ruckus. In the _Clone Repository_ dialog, select your team's repository URL from the following options:
 
-* **4410 ARC Lightning** `https://github.com/Andover-Robotics/4410-Skystone`
-* **5273 ARC Thunder** `https://github.com/Andover-Robotics/5273-Skystone`
-* **10331 ARC Hailstorm** `https://github.com/Andover-Robotics/10331-Skystone`
+* **4410 ARC Lightning**: \(to be determined for 2020-2021\)
+* **5273 ARC Thunder**: \(to be determined for 2020-2021\)
+* **10331 ARC Hailstorm**: \(to be determined for 2020-2021\)
 
 You now have Android Studio, Git, and your own copy of your team's code. You are now ready to contribute!
 

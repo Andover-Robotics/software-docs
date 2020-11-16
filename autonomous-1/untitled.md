@@ -17,7 +17,7 @@ Even though the Autonomous period lasts only 30 seconds, its scoring objectives 
 
 The Autonomous period is where all eyes of the team will point to you, the programmers. A great majority of your work throughout the season will be reflected in these 30 second periods, where your code is subject to the utmost scrutiny. The most important priorities of your Autonomous OpMode should reflect all the scoring objectives of the current year's game. In addition, you should prioritize the following goals:
 
-* **Reliable navigation**: The robot's motion must be consistent between runs such that the scoring objectives have a high chance of being fulfilled _\(See_ [_Motion Profiling_](motion-profiling.md) _for how to accomplish this\)_
+* **Reliable navigation**: The robot's motion must be consistent between runs such that the scoring objectives have a high chance of being fulfilled _\(See_ [_Motion Profiling_]() _for how to accomplish this\)_
 * **Human authority**: The drive team should always be able to abort your Autonomous OpMode instantly _\(See_ [_Stopping LinearOpModes_](../the-opmode-1/stopping-linearopmodes.md) _for how to accomplish this\)_
 * **System transparency**: Use [telemetry](../the-opmode-1/telemetry-and-debugging.md) appropriately to show information about your Autonomous OpMode's state
 * **General consistency**: When making decisions about how to interact with hardware, prioritize consistency between runs

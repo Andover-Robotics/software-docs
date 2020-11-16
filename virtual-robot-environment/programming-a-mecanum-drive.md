@@ -7,7 +7,8 @@ Many FTC teams choose mecanum drives for their drivetrains, and for good reason,
 ![A Mecanum Wheel](../.gitbook/assets/mecanum-wheel.png)
 
 ## Example Scenario
-Before we start coding the mecanum drivetrain, let’s take a look at a simpler scenario. Imagine a 2 motor tank drivetrain, which operates using the left joystick for forwards and backwards movement, and the right joystick for rotation. To control only forward/backward movement, all you have to  do is set the motor powers to the Y-value of the left stick  (flip the sign since Y is reversed):
+
+Before we start coding the mecanum drivetrain, let’s take a look at a simpler scenario. Imagine a 2 motor tank drivetrain, which operates using the left joystick for forwards and backwards movement, and the right joystick for rotation. To control only forward/backward movement, all you have to do is set the motor powers to the Y-value of the left stick \(flip the sign since Y is reversed\):
 
 ```java
 double y = -gamepad1.left_stick_y; // Remember, this is reversed!
@@ -26,7 +27,7 @@ leftMotor.setPower(y + x);
 rightMotor.setPower(y - x);
 ```
 
-Here, if you press just the left (Y) stick, the robot will move forward or backwards. If the right (X) stick is pressed, however, your left and right motors will spin in opposite directions, rotating the robot.
+Here, if you press just the left \(Y\) stick, the robot will move forward or backwards. If the right \(X\) stick is pressed, however, your left and right motors will spin in opposite directions, rotating the robot.
 
 ## Coding the Mecanum Drive
 
@@ -47,7 +48,7 @@ frontRightMotor.setPower(y - x - rx);
 backRightMotor.setPower(y + x - rx);
 ```
 
-This is the same as the tank example, except now with 4 motors and the strafing component added. Similar to the tank example, the Y component is added to all wheels, and the right x (rx) is added to the left and subtracted from the right. 
+This is the same as the tank example, except now with 4 motors and the strafing component added. Similar to the tank example, the Y component is added to all wheels, and the right x \(rx\) is added to the left and subtracted from the right.
 
 Now, we have added another component that will allow us to strafe rightward, and in doing that we have actually allowed for strafing in any direction. Pressing the joystick to the left will do the same thing in reverse, which is what is needed to strafe left. If it is pressed at 45 degrees, the x and y components of the joystick will be equal. This will cause two diagonal motors to cancel, allowing for diagonal movement. This same effect applies to every angle of the joystick.
 
@@ -68,3 +69,4 @@ Since we coded a mecanum driving opmode, select “mechanum driving opmode” fr
 Next, init and start the simulator. At the bottom are your left and right joysticks, along with the gamepad’s buttons. If your code is working properly, you should be able to drive around with the left joystick, and rotate left and right using the right one. Play around with it!
 
 Congratulations! You have now coded your first mecanum drive! From here on out, feel free to experiment with writing your own teleop classes or autonomous classes. Best of luck with your future robotics endeavors!
+

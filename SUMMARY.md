@@ -30,7 +30,7 @@
 
 * [The Autonomous Period](autonomous-1/untitled.md)
 
-## Virtual Robot Environment <a id="virtual-robot-environment"></a>
+## Virtual Robot Environment
 
 * [Setting Up The Virtual Robot Environment](virtual-robot-environment/setting-it-up.md)
 * [Programming a Mecanum Drive](virtual-robot-environment/programming-a-mecanum-drive.md)

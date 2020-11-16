@@ -5,20 +5,22 @@ In this lesson, we will be teaching you how to set up your very own Virtual Robo
 ## Installing
 
 ### Installing Java SE Development Kit 8
+
 This section may be skipped if you already have the Java Development Kit.
 
-{% embed url="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html" %}
+{% embed url="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html" caption="" %}
 
-Navigate to the link above and download the appropriate Java SE Development Kit 8u251 installer for your system. 
+Navigate to the link above and download the appropriate Java SE Development Kit 8u251 installer for your system.
 
 ![SE Development Kit Downloads](../.gitbook/assets/se-development-kit.png)
 
 Next, run the installer and follow the instructions to install the JDK.
 
 ### Installing IntelliJ
+
 This section may be skipped if you already have IntelliJ installed.
 
-{% embed url="https://www.jetbrains.com/idea/" %}
+{% embed url="https://www.jetbrains.com/idea/" caption="" %}
 
 Navigate to the link above and click on the download button in the middle left.
 
@@ -28,13 +30,13 @@ Next, download the appropriate Community Version installer for your computer.
 
 ![Choose the Community Version to download.](../.gitbook/assets/intellij-community.png)
 
-Run the installer and follow the instructions, accepting the defaults. 
+Run the installer and follow the instructions, accepting the defaults.
 
 ## Downloading the Virtual Robot Project
 
 Next, we are going to download the Virtual Robot Project from Github. Go to the link below and click on the Clone or Download button.
 
-{% embed url="https://github.com/Beta8397/virtual_robot" %}
+{% embed url="https://github.com/Beta8397/virtual\_robot" caption="" %}
 
 ![](../.gitbook/assets/Beta8397.png)
 
@@ -60,13 +62,14 @@ In the `Config` class, change the boolean `USE_VIRTUAL_GAMEPAD` to true.
 
 ![](../.gitbook/assets/config.png)
 
-Finally, navigate to the `MecanumDrivingOpMode` class - open `TeamCode`, `src`, `org.firstinspires.ftc.teamcode`, `ftc16072`, and then double click on the `MecanumDrivingOpMode` class. 
+Finally, navigate to the `MecanumDrivingOpMode` class - open `TeamCode`, `src`, `org.firstinspires.ftc.teamcode`, `ftc16072`, and then double click on the `MecanumDrivingOpMode` class.
 
 Delete the contents of the `loop()` method. We will be writing our own version of this in Lesson 6.
 
 ![](../.gitbook/assets/mecanum1.png)
 
 Add the following fields to the `MecanumDrivingOpMode` class:
+
 ```java
 private DcMotor motorFL = null;
 private DcMotor motorFR = null;
@@ -78,9 +81,9 @@ Remove the fields `mecanumDrive` and `distances`. Your class should look somethi
 
 ![](../.gitbook/assets/mecanum2.png)
 
-We are now going to init the DcMotors using a special class that helps you retrieve hardware devices from configuration in code. That’s right: it’s `hardwareMap`! (Revisit the  [HardwareConfiguration](../hardware-interaction/configuration.md) page for a quick reminder).
+We are now going to init the DcMotors using a special class that helps you retrieve hardware devices from configuration in code. That’s right: it’s `hardwareMap`! \(Revisit the [HardwareConfiguration](../hardware-interaction/configuration.md) page for a quick reminder\).
 
-We want to initialize the front left motor, the front right motor, the back left motor, and the back right motor. These are all `DcMotors`, and their names have been written as `front_left_motor`, `front_right_motor`, `back_left_motor`, and `back_right_motor` in the configuration. 
+We want to initialize the front left motor, the front right motor, the back left motor, and the back right motor. These are all `DcMotors`, and their names have been written as `front_left_motor`, `front_right_motor`, `back_left_motor`, and `back_right_motor` in the configuration.
 
 Try writing the init statements yourself now.
 
@@ -113,3 +116,4 @@ All together, it should look something like this:
 ![](../.gitbook/assets/init2.png)
 
 Congratulations! You have set up your very own Virtual Robot Environment. In future lessons, we will teach you how to use it to simulate different OpModes, and you’ll learn how to write some yourself!
+
