@@ -33,9 +33,9 @@ In summary, the motion planning techniques discussed in this conference presenta
  positive $x$ pointing forward, positive $y$ pointing left, and positive heading measured counter-clockwise from the
  x-axis. (Road Runner GitBook)
 
-The coordinate system described here is also applicable to field coor/assetsr of the field is$(0,0)$. Positive $x$ points toward the top of the field diagram, and positive $y$ points toward the left in the field diagram. Conveniently, this means that you can reason about the field coordinate system from the perspective of the **red** driver's box, as the axes align with what we expect in function graphs in algebra.
+The coordinate system described here is also applicable to field coordinates. The center of the field is $(0,0)$. Positive $x$ points toward the top of the field diagram, and positive $y$ points toward the left in the field diagram. Conveniently, this means that you can reason about the field coordinate system from the perspective of the **red** driver's box, as the axes align with what we expect in function graphs in algebra.
 
-![The Road Runner field coordinate system in Skystone (2019-2020)](..//assets/image%20%2820%29.png)
+![The Road Runner field coordinate system in Skystone (2019-2020)](../assets/image%20%2820%29.png)
 
 
 

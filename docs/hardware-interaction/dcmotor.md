@@ -18,13 +18,13 @@ The term `DcMotor` refers to the name of a class in the FTC SDK. This class desc
 
 ### Tetrix DC Gear Motor
 
-![A Tetrix DC Gear Motor (from Pitsco)](/assets/image (14).png)
+![A Tetrix DC Gear Motor (from Pitsco)](../assets/image (14).png)
 
 The club has a great abundance of these motors. Since most of them do not include an encoder, they are unsuitable for consistent autonomous operation or automatic speed control.
 
 ### Neverest Gearmotor
 
-![A Neverest 40 Gearmotor (from AndyMark)](/assets/image (15).png)
+![A Neverest 40 Gearmotor (from AndyMark)](../assets/image (15).png)
 
 Recently, the club has obtained many Neverest Gearmotors for more rigorous use cases, such as powering the drivetrain. These have attached encoders that **require 5V to run**. This means that a level shifter is required in order to operate these encoders using REV Expansion Hubs.
 
@@ -32,7 +32,7 @@ Recently, the club has obtained many Neverest Gearmotors for more rigorous use c
 
 ### goBILDA Yellow Jacket Gear Motor
 
-![A 13.7:1 ratio Yellow Jacket Gear Motor (from goBILDA)](/assets/image (16).png)
+![A 13.7:1 ratio Yellow Jacket Gear Motor (from goBILDA)](../assets/image (16).png)
 
 When developing ARC Thunder's robot for World Championships, we began using these motors to power some mechanisms. They have built-in encoders that work with both 3.3V and 5V, so no level shifter is needed in any scenario. ARC has Yellow Jacket Gear Motors in several gear ratios, meaning that there is a wide range of proportions between speed and torque when selecting these motors. As of the 2020-2021 season, the Yellow Jacket Gear Motor is projected to become the club's default motor choice.
 

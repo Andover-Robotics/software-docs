@@ -4,7 +4,7 @@
 
 Many FTC teams choose mecanum drives for their drivetrains, and for good reason, too. Mecanum wheels have rollers at a 45° angle to the rest of the wheel, so depending on how the wheels are driven, X or Y components of the force vectors can cancel, allowing movement in any direction rather than just forwards or backwards.
 
-![A Mecanum Wheel](/assets/mecanum-wheel.png)
+![A Mecanum Wheel](../assets/mecanum-wheel.png)
 
 ## Example Scenario
 
@@ -56,15 +56,15 @@ Your mecanum drive code should be done now! Let’s test it out.
 
 Run the code using the toolbar’s play button in the top right corner.
 
-![](/assets/toolbar.png)
+![](../assets/toolbar.png)
 
 You should see the following:
 
-![](/assets/simulator.png)
+![](../assets/simulator.png)
 
 Since we coded a mecanum driving opmode, select “mechanum driving opmode” from the dropdown menu.
 
-![Choosing the OpMode](/assets/choosing-opmode.png)
+![Choosing the OpMode](../assets/choosing-opmode.png)
 
 Next, init and start the simulator. At the bottom are your left and right joysticks, along with the gamepad’s buttons. If your code is working properly, you should be able to drive around with the left joystick, and rotate left and right using the right one. Play around with it!
 

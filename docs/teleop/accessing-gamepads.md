@@ -10,7 +10,7 @@ How do you know which controller is `gamepad1` and which is `gamepad2`? These fi
 JavaDocs for the Gamepad class
 {% endembed %}
 
-![Control columns of a F310 Gamepad (from Modern Robotics)](/assets/image (17).png)
+![Control columns of a F310 Gamepad (from Modern Robotics)](../assets/image (17).png)
 
 Notice how each control column on a standard Gamepad is reflected with a field in `Gamepad`. The values for these fields are updated in real time as your OpMode executes, so accessing them at any time will yield the most up-to-date data from the controller itself. For example, the following expression is `true` whenever the "X" button of Gamepad 1 is pressed:
 

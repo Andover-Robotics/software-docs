@@ -12,7 +12,7 @@ This section may be skipped if you already have the Java Development Kit.
 
 Navigate to the link above and download the appropriate Java SE Development Kit 8u251 installer for your system.
 
-![SE Development Kit Downloads](/assets/se-development-kit.png)
+![SE Development Kit Downloads](../assets/se-development-kit.png)
 
 Next, run the installer and follow the instructions to install the JDK.
 
@@ -24,11 +24,11 @@ This section may be skipped if you already have IntelliJ installed.
 
 Navigate to the link above and click on the download button in the middle left.
 
-![](/assets/intellij.png)
+![](../assets/intellij.png)
 
 Next, download the appropriate Community Version installer for your computer.
 
-![Choose the Community Version to download.](/assets/intellij-community.png)
+![Choose the Community Version to download.](../assets/intellij-community.png)
 
 Run the installer and follow the instructions, accepting the defaults.
 
@@ -38,35 +38,35 @@ Next, we are going to download the Virtual Robot Project from Github. Go to the 
 
 {% embed url="https://github.com/Beta8397/virtual_robot" %}
 
-![](/assets/Beta8397.png)
+![](../assets/Beta8397.png)
 
 Copy the web URL to your clipboard, and run IntelliJ IDEA.
 
-![](/assets/clone.png)
+![](../assets/clone.png)
 
 Create a new project by selecting “Check out from Version Control” and then selecting Git.
 
-![Creating a New Project](/assets/new-project.png)
+![Creating a New Project](../assets/new-project.png)
 
 Paste the copied URL and press “Clone.” IntelliJ should open a new project. Next, try running the program by clicking on the green arrowhead in the upper toolbar.
 
-![](/assets/toolbar.png)
+![](../assets/toolbar.png)
 
 ## Setting Up The Virtual Robot Environment
 
 Now we will be setting up the Virtual Robot Environment for this course’s use. First, navigate to the Config class on the left menu bar by opening `virtual_robot`, then `Controller`, then `config`. Double click on the `Config` class to open it.
 
-![](/assets/navigation.png)
+![](../assets/navigation.png)
 
 In the `Config` class, change the boolean `USE_VIRTUAL_GAMEPAD` to true.
 
-![](/assets/config.png)
+![](../assets/config.png)
 
 Finally, navigate to the `MecanumDrivingOpMode` class - open `TeamCode`, `src`, `org.firstinspires.ftc.teamcode`, `ftc16072`, and then double click on the `MecanumDrivingOpMode` class.
 
 Delete the contents of the `loop()` method. We will be writing our own version of this in Lesson 6.
 
-![](/assets/mecanum1.png)
+![](../assets/mecanum1.png)
 
 Add the following fields to the `MecanumDrivingOpMode` class:
 
@@ -79,7 +79,7 @@ private DcMotor motorBR = null;
 
 Remove the fields `mecanumDrive` and `distances`. Your class should look something like this:
 
-![](/assets/mecanum2.png)
+![](../assets/mecanum2.png)
 
 We are now going to init the DcMotors using a special class that helps you retrieve hardware devices from configuration in code. That’s right: it’s `hardwareMap`! (Revisit the [HardwareConfiguration](../hardware-interaction/configuration.md) page for a quick reminder).
 
@@ -91,7 +91,7 @@ Done?
 
 They should look something like this:
 
-![](/assets/init.png)
+![](../assets/init.png)
 
 Recall that the hardwareMap class uses `.get()` to retrieve instances. Since we are initializing the `DcMotors`, we use `hardwareMap.dcMotor.get()`, and then place our motor’s name from the config in the parenthesis.
 
@@ -113,6 +113,6 @@ motorBL.setDirection(DcMotor.Direction.REVERSE);
 
 All together, it should look something like this:
 
-![](/assets/init2.png)
+![](../assets/init2.png)
 
 Congratulations! You have set up your very own Virtual Robot Environment. In future lessons, we will teach you how to use it to simulate different OpModes, and you’ll learn how to write some yourself!

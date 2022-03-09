@@ -10,7 +10,7 @@ summary: >-
 
 A **Finite State Machine** is a computational pattern where the system is in one of a **finite** number of possible **states** at any moment. For a concrete example, consider the following **state diagram**:
 
-![Simple state diagram for a turnstile (Chetvorno, via Wikimedia Commons)](/assets/image (18).png)
+![Simple state diagram for a turnstile (Chetvorno, via Wikimedia Commons)](../assets/image (18).png)
 
 There are two states in this state machine scheme: _Locked_ and _Unlocked_. There are two **events**, _Push_ and _Coin_, that cause the system to enter certain state transitions. Each state has two outward-pointing arrows that each correspond to a particular event: for example, if a user _pushes_ the turnstile when it is _locked_, it will stay locked, according to the leftmost looping arrow; if a user enters a _coin_ when it is _locked_, it will transition to the _unlocked_ state, according to the top arching arrow.
 
@@ -18,7 +18,7 @@ There are two states in this state machine scheme: _Locked_ and _Unlocked_. Ther
 
 For ARC Thunder's World Championship robot (_"Thor"_), we established an elaborate Finite State Machine in order to facilitate driver operations. In the programming documentation of _Thor_, we included the following state diagram:
 
-![State diagram for Thor's TeleOp](/assets/image (19).png)
+![State diagram for Thor's TeleOp](../assets/image (19).png)
 
 Although the events in this state diagram are not shown due to graphical limitations, this diagram demonstrates a clear correlation between the _state_ concept and the operation of a robot during TeleOp. To earn points during the first 90 seconds of TeleOp, _Thor_ performs the following actions repeatedly and in this order:
 

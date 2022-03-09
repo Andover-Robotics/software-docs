@@ -6,7 +6,7 @@ summary: What happens on competition day?
 
 A standard match in an FTC competition consists of several important elements. Two **alliances**, red and blue, face off in each match and try to score as many points as possible. Each alliance consists of **two robots.** Every match is **two and a half minutes long**, but that time may be split into 4 distinct phases. Each phase is briefly described below.
 
-![](/assets/FTC Match Structure@2x (1).png)
+![](../assets/FTC Match Structure@2x (1).png)
 
 ## Pre-Match&#x20;
 
