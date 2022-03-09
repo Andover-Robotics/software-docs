@@ -28,7 +28,7 @@ This guide assumes that you have sufficient background knowledge in computer sci
 Your knowledge of FTC software should not be limited by the scope of this guide. The following resources can help you understand more aspects of programming in FTC. If you are new to coding at ARC, this is a great place to start. Just pick a spot that best reflects your current learning progress and start experimenting.
 
 * [**Think Java**](https://books.trinket.io/thinkjava/index.html) is a full (but concise) textbook that introduces newcomers to computer science through Java. This book includes concepts that are not relevant to programming at ARC, but it can be a good option if you want to program outside of ARC or if you aren't sure about something in Java.
-* [**Game Manual 0**](https://gm0.copperforge.cc/en/stable/docs/software/index.html) **** is an invaluable guide for FTC teams that covers nearly everything teams need to know, including awards, mechanical concepts, and programming. It offers a rather minimalistic introduction to Java that may not lead to a full understanding of computer science. This is a good option if you want to program at ARC exclusively.
+* [**Game Manual 0**](https://gm0.copperforge.cc/en/stable/docs/software/index.html)  is an invaluable guide for FTC teams that covers nearly everything teams need to know, including awards, mechanical concepts, and programming. It offers a rather minimalistic introduction to Java that may not lead to a full understanding of computer science. This is a good option if you want to program at ARC exclusively.
 * [**Robotics Java**](https://robotics-java.learnwhiledoing.org) is a much more comprehensive guide to FTC software than its section in Game Manual 0, and its introduction to concepts in Java is more solid as well. **We recommend this resource for everyone.**
 * The **ARC Software Codio course** contains questions that assess your knowledge of the topics covered in this website, ARC Software. We try to make it more interesting than rote memorization and recall by asking you to examine the club's past code and diagnose problematic code segments. Ask a member of the ARC Board for information on how to join this course.
 
@@ -39,11 +39,11 @@ To save ourselves time and enhance our competitive performance, we use a few thi
 * **Road Runner** is an advanced motion planning library for FTC. We mainly use it to improve our robot's ability to navigate during autonomous.
   * [Learn Road Runner](https://www.learnroadrunner.com)
   * [Road Runner docs](https://acme-robotics.gitbook.io/road-runner/)
-* **FTCLib** __ is an all-encompassing library that includes convenient abstractions for various needs, including controller reading, Mecanum drive and localization, and computer vision.
+* **FTCLib** is an all-encompassing library that includes convenient abstractions for various needs, including controller reading, Mecanum drive and localization, and computer vision.
   * [FTCLib](https://docs.ftclib.org/ftclib/)
     * [WPILib tutorials](https://docs.wpilib.org/en/stable/docs/software/examples-tutorials/trajectory-tutorial/) (FTCLib is modeled after WPILib)
-* ****[**REVExtensions2**](https://github.com/OpenFTC/RevExtensions2) offers neat extra features that give us more control over the REV Expansion Hubs (see [The FTC Control System](the-ftc-control-system.md#rev-expansion-hub)).
-* ****[**FTC Dashboard**](https://github.com/acmerobotics/ftc-dashboard) is a neat webpage that shows the robot's detected position on the field and can graph various parameters as well as change `public static` variables on the fly.
+* [**REVExtensions2**](https://github.com/OpenFTC/RevExtensions2) offers neat extra features that give us more control over the REV Expansion Hubs (see [The FTC Control System](the-ftc-control-system.md#rev-expansion-hub)).
+* [**FTC Dashboard**](https://github.com/acmerobotics/ftc-dashboard) is a neat webpage that shows the robot's detected position on the field and can graph various parameters as well as change `public static` variables on the fly.
 * [**ARC-Core**](https://github.com/andover-robotics/arc-core) is our own library for code that applies to all teams. It contains a Mecanum drive implementation and support for various unit conversions.
 
 ## Other Resources

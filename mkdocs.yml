@@ -1,6 +1,24 @@
 site_name: ARC Software
 theme:
   name: material
+markdown_extensions:
+  - def_list
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+plugins:
+  - mkdocs-video
+extra_css:
+  - https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js
+  - js/katex.js
 nav:
   - Introduction: 'index.md'
   - The FTC Control System: 'the-ftc-control-system.md'
@@ -22,7 +40,7 @@ nav:
     - The TeleOp Period: 'teleop/the-teleop-period.md'
     - Finite State Machines: 'teleop/finite-state-machines.md'
   - Autonomous:
-    - The Autonomous Period: 'autonomous/untitled.md'
+    - The Autonomous Period: 'autonomous/the-autonomous-period.md'
   - Virtual Robot Environment:
     - Setting Up The Virtual Robot Environment: 'virtual-robot-environment/setting-it-up.md'
     - Programming a Mecanum Drive: 'virtual-robot-environment/programming-a-mecanum-drive.md'

@@ -4,9 +4,9 @@ summary: It is 2 minutes of driver operated robot action.
 
 # The TeleOp Period
 
-After the Autonomous period \(where the robot must operate entirely on preprogrammed instructions\), the TeleOp period, in which the drive team can control the robot using gamepads, begins and continues until the end of the match. The TeleOp period lasts 120 seconds \(or 2 minutes\) in total.
+After the Autonomous period (where the robot must operate entirely on preprogrammed instructions), the TeleOp period, in which the drive team can control the robot using gamepads, begins and continues until the end of the match. The TeleOp period lasts 120 seconds (or 2 minutes) in total.
 
-The TeleOp period has fewer possible scoring objectives than Autonomous, so being competitive in TeleOp means being able to accomplish the scoring objective quickly and repeatedly. For the first 90 seconds of TeleOp, the robot works with its alliance partner to score as many points as possible using the TeleOp scoring objectives. The last 30 seconds are what is known as the End Game, where we have opportunities to complete specific scoring objectives to earn extra points. These objectives revolve around the way the robot finishes the game \(like parking in a specific area or hanging off of a game element\).
+The TeleOp period has fewer possible scoring objectives than Autonomous, so being competitive in TeleOp means being able to accomplish the scoring objective quickly and repeatedly. For the first 90 seconds of TeleOp, the robot works with its alliance partner to score as many points as possible using the TeleOp scoring objectives. The last 30 seconds are what is known as the End Game, where we have opportunities to complete specific scoring objectives to earn extra points. These objectives revolve around the way the robot finishes the game (like parking in a specific area or hanging off of a game element).
 
 ## The Duty of a TeleOp OpMode
 
@@ -20,7 +20,7 @@ In addition, your TeleOp OpMode should abide by the following principles:
 
 1. Drivers must be able to abort and override automated operations instantly
 2. Drivers must be able to override software limits
-3. The cycle rate of the OpMode should be maximized \(see the Optimization section for how to accomplish this\)
+3. The cycle rate of the OpMode should be maximized (see the Optimization section for how to accomplish this)
 
 ## Driver-Controlled Enhancements
 

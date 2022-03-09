@@ -9,17 +9,16 @@ The **Inertial Measurement Unit** of a REV Expansion Hub is an electronic device
 * Gravity
 * Temperature
 
-{% hint style="warning" %}
-Although the IMU is capable of measuring linear acceleration, it is not optimal for measuring displacement due to inaccuracies. Consider a scenario where a robot stays at rest. The measured linear acceleration is supposed to be 0, but it may fluctuate around 0 due to signal noise, causing minor changes in velocity that in turn causes the calculated displacement to deviate from the resting position at a steady rate. When the robot accelerates, inaccuracies like these add up over time, reducing the usefulness of the displacement measurements. **Do not rely on linear acceleration measurements from the IMU for displacement feedback.**
-{% endhint %}
+!!! warning
+    Although the IMU is capable of measuring linear acceleration, it is not optimal for measuring displacement due to inaccuracies. Consider a scenario where a robot stays at rest. The measured linear acceleration is supposed to be 0, but it may fluctuate around 0 due to signal noise, causing minor changes in velocity that in turn causes the calculated displacement to deviate from the resting position at a steady rate. When the robot accelerates, inaccuracies like these add up over time, reducing the usefulness of the displacement measurements. **Do not rely on linear acceleration measurements from the IMU for displacement feedback.**
 
 **The IMU is** [**useful**](https://github.com/OpenFTC/OpenRC-Turbo/blob/324ed36fa4c1adb305c026f52b746acd4692e88a/Hardware/src/main/java/com/qualcomm/hardware/bosch/BNO055IMU.java#L71) **for rotation feedback**, so you can use its angular orientation measurements to help your robot execute perfect turns during autonomous. You can also use the IMU to enable field-centric movement control during TeleOp, which may reduce driver cognitive workload for certain applications and improve scoring performance.
 
 ## Dimensions
 
-The following video from FIRST demonstrates how each rotational axis \(heading, roll, and pitch\) corresponds to the physical dimensions of the REV Expansion Hub.
+The following video from FIRST demonstrates how each rotational axis (heading, roll, and pitch) corresponds to the physical dimensions of the REV Expansion Hub.
 
-{% embed url="https://youtu.be/eN7fQnQ8zeg" caption="" %}
+![type:video](https://youtube.com/embed/eN7fQnQ8zeg)
 
 ## Usage
 
@@ -54,7 +53,7 @@ To read angular orientation measurements from the IMU, we use the `getAngularOri
 2. The second parameter depends on the rotational axis to be read. If you intend to read the Z-axis, use `AxesOrder.ZYX`. If you intend to read the X-axis, use `AxesOrder.XYZ`.
 3. The third parameter depends on how you intend to use the retrieved values. If you will use trigonometric functions with them, it is a good idea to use `AngleUnit.RADIANS`. Otherwise, it might be more intuitive to use `AngleUnit.DEGREES`.
 
-Once you have retrieved the angular orientation data in an `Orientation` object, you can access the heading of the robot with the `firstAngle` field. The range of values for this field is $$[-180, 180]$$ for degrees and $$[-\pi, \pi]$$ for radians. The initial orientation of the hub will take on a value of 0, and the positive direction corresponds to counter-clockwise rotation. Examine the video above for more intuition.
+Once you have retrieved the angular orientation data in an `Orientation` object, you can access the heading of the robot with the `firstAngle` field. The range of values for this field is $[-180, 180]$ for degrees and $[-\pi, \pi]$ for radians. The initial orientation of the hub will take on a value of 0, and the positive direction corresponds to counter-clockwise rotation. Examine the video above for more intuition.
 
 ```java
 // Obtain the orientation from the hub. The first angle shall be the X-axis reading. The unit of the first angle value should be degrees.
@@ -64,15 +63,13 @@ Orientation orient = imu.getOrientation(AxesReference.INTRINSIC, AxesOrder.XYZ, 
 double angle = orient.firstAngle;
 ```
 
-{% hint style="warning" %}
-Since the angle output is constrained to $$[-180, 180]$$ or $$[-\pi, \pi]$$, the reading will wrap around the possible range when crossing an extremum. For example, if you were to keep track of the angle reading when the robot performs a full clockwise rotation, the reading would reach -180 degrees and immediately jump to 180 degrees. It is very possible that the robot might cross this heading when executing autonomous turns, so it is important to take the wraparound into consideration when programming.
-{% endhint %}
+!!! warning
+    Since the angle output is constrained to $[-180, 180]$ or $[-\pi, \pi]$, the reading will wrap around the possible range when crossing an extremum. For example, if you were to keep track of the angle reading when the robot performs a full clockwise rotation, the reading would reach -180 degrees and immediately jump to 180 degrees. It is very possible that the robot might cross this heading when executing autonomous turns, so it is important to take the wraparound into consideration when programming.
 
-{% hint style="info" %}
-Q: Why do we have to use `firstAngle` to refer to the heading? If we need to access the Z-axis, couldn't we have `AxesOrder.XYZ` and use `thirdAngle`?
+!!! info
+    Q: Why do we have to use `firstAngle` to refer to the heading? If we need to access the Z-axis, couldn't we have `AxesOrder.XYZ` and use `thirdAngle`?
 
-A: We have chosen `firstAngle` as our convention because of Road Runner. Road Runner Quickstart's FTC integration classes implement the `getExternalHeading` method by accessing the `firstAngle` of the input `Orientation`. It is a good idea to share the `BNO055IMU` instance used by Road Runner, since it is redundant to initialize another instance during a match. To minimize ambiguity and hide the implementation details of `Orientation`, you are free to wrap the access logic in your own class.
-{% endhint %}
+    A: We have chosen `firstAngle` as our convention because of Road Runner. Road Runner Quickstart's FTC integration classes implement the `getExternalHeading` method by accessing the `firstAngle` of the input `Orientation`. It is a good idea to share the `BNO055IMU` instance used by Road Runner, since it is redundant to initialize another instance during a match. To minimize ambiguity and hide the implementation details of `Orientation`, you are free to wrap the access logic in your own class.
 
 For a complete reference of the `BNO055IMU` class, check out the following source file from OpenFTC. Since the class is technically not part of the official `org.firstinspires` packages, you cannot find it in the official JavaDocs. Instead, you can read the inline JavaDoc source located in its extracted source file below:
 
@@ -81,6 +78,6 @@ For a complete reference of the `BNO055IMU` class, check out the following sourc
 ## Check Your Understanding
 
 1. What IMU measurement is the most useful in FTC? How could you use this measurement to improve performance?
-2. If you are currently working on a robot, which axis \(X, Y, or Z\) of the Expansion Hub corresponds to the robot's heading?
-3. Given an initialized `BNO055IMU` instance assigned to a field named `imu`, retrieve the X-axis angular orientation reading in degrees and normalize it to the range $$[0, 360]$$.
+2. If you are currently working on a robot, which axis ($X$, $Y$, or $Z$) of the Expansion Hub corresponds to the robot's heading?
+3. Given an initialized `BNO055IMU` instance assigned to a field named `imu`, retrieve the X-axis angular orientation reading in degrees and normalize it to the range $[0, 360]$.
 

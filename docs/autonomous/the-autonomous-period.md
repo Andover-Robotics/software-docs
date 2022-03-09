@@ -19,9 +19,9 @@ The Autonomous period is where all eyes of the team will point to you, the progr
 
 * **Reliable navigation**: The robot's motion must be consistent between runs such that the scoring objectives have a high chance of being fulfilled\
   _(See_ [_Motion Profiling_](broken-reference) _for how to accomplish this)_
-* **Human authority**: The drive team should always be able to abort your Autonomous OpMode instantly\
-  _(See_ [_Stopping LinearOpModes_](../the-opmode-1/stopping-linearopmodes.md) _for how to accomplish this)_
-* **System transparency**: Use [telemetry](../the-opmode-1/telemetry-and-debugging.md) appropriately to show information about your Autonomous OpMode's state
+* **Human authority**: The drive team should always be able to abort your Autonomous OpMode instantly
+  _(See_ [_Stopping LinearOpModes_](../opmodes/stopping-linearopmodes.md) _for how to accomplish this)_
+* **System transparency**: Use [telemetry](../opmodes/telemetry-and-debugging.md) appropriately to show information about your Autonomous OpMode's state
 * **General consistency**: When making decisions about how to interact with hardware, prioritize consistency between runs
 
 ## Devising Paths and Strategies
@@ -30,15 +30,12 @@ Each year, the game elements and autonomous scoring objectives are laid out such
 
 When designing these paths, you must consider the robot's limitations of independent navigation. Traversing through small corridors between fixed game elements, for example, introduces a factor of uncertainty and should be avoided. Have the robot use external tracking targets to calibrate its spatial awareness against the playing field. Use measurements from the [inertial measurement unit](../hardware-interaction/inertial-measurement-unit.md) to ensure that the robot is oriented correctly for each leg of the path. If it is practical, ask your team about the feasibility of odometry, a localization technique that keeps track of position by measuring the rotation of dead-axle omniwheels as they are spun by the field floor during robot movement.
 
-{% embed url="https://youtu.be/lb1Sn7KMev0" %}
-Part 2 of Wizards.exe's Odometry Spell Book
-{% endembed %}
+![type:video](https://youtube.com/embed/lb1Sn7KMev0)
 
 ## Imperative Implementation
 
 The most common strategy for the Autonomous period is to perform a predetermined sequence of tasks, which can be easily achieved by writing a series of statements in the `runOpMode` method of a `LinearOpMode`. For example, consider the following OpMode definition:
 
-{% code title="MyAuto.java" %}
 ```java
 @Autonomous(name = "My Autonomous", group = "Competition")
 public class MyAuto extends LinearOpMode {
@@ -63,11 +60,9 @@ public class MyAuto extends LinearOpMode {
   }
 }
 ```
-{% endcode %}
 
-{% hint style="info" %}
-In this example, we are almost able to read the contents of `runOpMode` out loud and be understood as if we were speaking plain English. Instead of issuing raw numbers to individual hardware devices, this example describes the procedure in a high level of [abstraction](https://youtu.be/6V1sr0XV\_Ng), so the technical details are hidden from those who don't need to know them. As your autonomous programs accumulate complexity over time, it is important to utilize abstraction in order to make your code more maintainable and readable to other programmers. Check out [_Integrate with your Team_](../working-with-a-team/integrate-with-your-team.md) for more tips on maximizing your code's cleanliness.
-{% endhint %}
+!!! info
+    In this example, we are almost able to read the contents of `runOpMode` out loud and be understood as if we were speaking plain English. Instead of issuing raw numbers to individual hardware devices, this example describes the procedure in a high level of [abstraction](https://youtu.be/6V1sr0XV\_Ng), so the technical details are hidden from those who don't need to know them. As your autonomous programs accumulate complexity over time, it is important to utilize abstraction in order to make your code more maintainable and readable to other programmers. Check out [_Integrate with your Team_](../working-with-a-team/integrate-with-your-team.md) for more tips on maximizing your code's cleanliness.
 
 If you have an autonomous strategy in mind for your team, think about how it could be translated into software that your robot can execute. Think about how you would structure it and vary it for different starting positions. Think about the points of failure and how your robot would behave it any of them were to fail. Think about how your robot would collaborate with an alliance partner.
 

@@ -27,9 +27,8 @@ FIRST officially documents the process of installing these requirements with [a 
 
 [GitHub](https://github.com) is a popular website that hosts Git repositories online. ARC uses GitHub to help programmers collaborate on a shared coding project. To become a meaningful contributor to your team's code, you must be able to push changes to GitHub. If you do not have your own GitHub account, [sign up here](https://github.com/join). Once your account is ready, ask your CSO(s) about joining ARC's GitHub organization.
 
-{% hint style="info" %}
-The club has struggled in using Git in the past _(we have literally spent full meetings resolving problems with Git)._ There are some best practices that help your team get the most out of Git and stay away from its grievances. Refer to [_Using Git Effectively_](working-with-a-team/using-git-effectively.md) for more details.
-{% endhint %}
+!!! info
+   The club has struggled in using Git in the past _(we have literally spent full meetings resolving problems with Git)._ There are some best practices that help your team get the most out of Git and stay away from its grievances. Refer to [_Using Git Effectively_](working-with-a-team/using-git-effectively.md) for more details.
 
 ### Local clone of your team's repository
 
