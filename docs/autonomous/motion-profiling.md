@@ -23,7 +23,7 @@ Thankfully, the underlying calculus and algebra involved in motion profiling is 
 
 ## Road Runner
 
-\_\_[_Road Runner_](https://github.com/acmerobotics/road-runner) is a motion profiling software library from ACME Robotics that applies motion planning concepts to FTC. The authors of this library have created a separate [documentation GitBook](https://acme-robotics.gitbook.io/road-runner/tour/introduction) that explains the core concepts behind how motion profiling works. 
+[_Road Runner_](https://github.com/acmerobotics/road-runner) is a motion profiling software library from ACME Robotics that applies motion planning concepts to FTC. The authors of this library have created a separate [documentation GitBook](https://acme-robotics.gitbook.io/road-runner/tour/introduction) that explains the core concepts behind how motion profiling works. 
 
 In summary, the motion planning techniques discussed in this conference presentation 
 

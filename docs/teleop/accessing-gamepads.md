@@ -4,7 +4,7 @@
 
 To perform in TeleOp, your code needs to be able to read inputs from the driver's handheld controllers in real time. This is accomplished by accessing the fields of two instances of  the`Gamepad class` in the `TeleOp` class: `gamepad1` and `gamepad2`. Both of these fields will have been initialized by the FTC Robot Controller app while the program is initializing, so you do not have to worry about their initialization and may program under the assumption that they are non-null instances of the `Gamepad` class.&#x20;
 
-How do you know which controller is `gamepad1` and which is `gamepad2`? These fields correspond to the _User 1_ and _User 2_ registrations on the Driver Station, which may be set up by the drivers on the FTC Driver Station app before the program is initialized; see FTC's [wiki page](https://github.com/FIRST-Tech-Challenge/SkyStone/wiki/Creating-and-Running-an-Op-Mode-\(Android-Studio)#running-your-op-mode-with-a-gamepad-connected) on how these registrations work.
+How do you know which controller is `gamepad1` and which is `gamepad2`? These fields correspond to the _User 1_ and _User 2_ registrations on the Driver Station, which may be set up by the drivers on the FTC Driver Station app before the program is initialized; see FTC's [wiki page](https://github.com/FIRST-Tech-Challenge/FtcRobotController/wiki/Creating-and-Running-an-Op-Mode-\(Android-Studio)#running-your-op-mode-with-a-gamepad-connected) on how these registrations work.
 
 {% embed url="https://ftctechnh.github.io/ftc_app/doc/javadoc/com/qualcomm/robotcore/hardware/Gamepad.html" %}
 JavaDocs for the Gamepad class
@@ -50,7 +50,7 @@ In this example, we simply pass the values of the fields of `gamepad1` to the tw
 
 Examine the following examples from both _FIRST_ and the club's previous programs. Try to understand each control scheme and imagine explaining it to a potential driver—the control scheme of your robot is something **you** will need to negotiate!
 
-* [_Basic Iterative OpMode example_](https://github.com/FIRST-Tech-Challenge/SkyStone/blob/master/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples/BasicOpMode\_Iterative.java#L113), from FIRST
+* [_Basic Iterative OpMode example_](https://github.com/FIRST-Tech-Challenge/FtcRobotController/blob/master/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples/BasicOpMode\_Iterative.java#L113), from FIRST
 * __[_ARC Thunder's TeleOp for Rover Ruckus_](https://github.com/ARC-Thunder/Rover-Ruckus/blob/master/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/MainTeleOp.java#L64)__
 * __[_ARC Hailstorm's TeleOp for Relic Recovery_](https://github.com/AHSHailstorm/ARC-Hailstorm2017-2018/blob/master/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/HailstormBasicTeleOp2017\_2018.java#L50)__
 * __[_ARC Thunder's TeleOp for Velocity Vortex_](https://github.com/Andover-Robotics/ARC-Thunder-2016-2017/blob/master/ThunderBasicTeleOp2016\_2017.java#L75)__

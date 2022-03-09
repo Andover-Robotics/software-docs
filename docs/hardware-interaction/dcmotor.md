@@ -103,7 +103,7 @@ To check whether the motor has reached the target position, call [`DcMotor.isBus
 
 ## Examples
 
-The following annotated examples demonstrate how to use the `DcMotor` interface effectively. Feel free to refer to FTC's [official samples](https://github.com/FIRST-Tech-Challenge/SkyStone/tree/master/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples) for further guidance.
+The following annotated examples demonstrate how to use the `DcMotor` interface effectively. Feel free to refer to FTC's [official samples](https://github.com/FIRST-Tech-Challenge/FtcRobotController/tree/master/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples) for further guidance.
 
 ```java
 public class Demo {

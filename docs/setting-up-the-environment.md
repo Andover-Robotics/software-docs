@@ -12,14 +12,12 @@ To successfully develop, build and deploy code for the Robot Controller phone, y
 * Git
 * Local clone of your team's repository
 
-FIRST officially documents the process of installing these requirements with [a video](https://youtu.be/mMrC5kDcUN4?t=47s) and [a wiki page](https://github.com/FIRST-Tech-Challenge/SkyStone/wiki/Installing-Android-Studio). It is recommended that you follow these videos in preparing your local setup for FTC programming.
+FIRST officially documents the process of installing these requirements with [a video](https://youtu.be/mMrC5kDcUN4?t=47s) and [a wiki page](https://github.com/FIRST-Tech-Challenge/FtcRobotController/wiki/Installing-Android-Studio). It is recommended that you follow these videos in preparing your local setup for FTC programming.
 
 ### Android Studio
 
 1. Download and install Android Studio from [this page](https://developer.android.com/studio/).\
-   Android has a [guide](https://developer.android.com/studio/install), FIRST has a [guide](https://github.com/FIRST-Tech-Challenge/SkyStone/wiki/Installing-Android-Studio), and we have a [guide](https://github.com/Andover-Robotics/ARC-Core/wiki/Introduction).
-2. In Android Studio, [disable Instant Run](https://github.com/FIRST-Tech-Challenge/SkyStone/wiki/Disabling-Android-Studio-Instant-Run).\
-   _Instant Run has plagued the programmers of the club in the past—don't repeat our mistakes._
+   Android has a [guide](https://developer.android.com/studio/install), FIRST has a [guide](https://github.com/FIRST-Tech-Challenge/FtcRobotController/wiki/Installing-Android-Studio), and we have a [guide](https://github.com/Andover-Robotics/ARC-Core/wiki/Introduction).
 
 ### Git
 

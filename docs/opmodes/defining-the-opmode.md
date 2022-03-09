@@ -11,7 +11,7 @@ OpModes are essential to programming in FTC. It is the entry point of your progr
 A TV can have multiple channels. A smartphone can have multiple apps. A computer can have multiple programs. A codebase for FTC can have multiple OpModes. An OpMode is a particular procedure that is executed by a FTC Robot Controller phone. You might create OpModes to test electronics, run autonomously for the Autonomous Period, run using remote control for the TeleOp Period, or to experiment with unfamiliar software.
 
 !!! info
-    FIRST provides numerous example OpModes in the FtcRobotController app. They are accessible through both Android Studio and the [Skystone GitHub repository](https://github.com/FIRST-Tech-Challenge/SkyStone/tree/master/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples). Their content covers numerous topics of FTC programming, including how to use motors, many types of sensors, telemetry, and image recognition. Throughout your experience as a programmer for ARC, these examples are excellent references for how certain tasks are done. They also serve as a reminder of the format that OpModes should follow.
+    FIRST provides numerous example OpModes in the FtcRobotController app. They are accessible through both Android Studio and the [Skystone GitHub repository](https://github.com/FIRST-Tech-Challenge/FtcRobotController/tree/master/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples). Their content covers numerous topics of FTC programming, including how to use motors, many types of sensors, telemetry, and image recognition. Throughout your experience as a programmer for ARC, these examples are excellent references for how certain tasks are done. They also serve as a reminder of the format that OpModes should follow.
 
 ## OpMode Lifecycle
 
@@ -44,7 +44,7 @@ By the nature of the FTC Control System, the Robot Controller and the Driver Sta
 
 ## OpMode Definition
 
-Refer to the [official examples](https://github.com/FIRST-Tech-Challenge/SkyStone/blob/master/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples/BasicOpMode_Iterative.java) for a demonstration. To define an OpMode in Java, simply follow the following steps:
+Refer to the [official examples](https://github.com/FIRST-Tech-Challenge/FtcRobotController/blob/master/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples/BasicOpMode_Iterative.java) for a demonstration. To define an OpMode in Java, simply follow the following steps:
 
 1. Make a new class for the OpMode, and let the class extend either `OpMode` or `LinearOpMode`. _\(See_ [_OpMode vs LinearOpMode_](opmode-vs-linearopmode.md) _for an explanation of these options)_ 
 2. Annotate the class with either `@Autonomous` or `@TeleOp`. This will determine where your new OpMode will be found on the Driver Station interface. Select the option that is appropriate for your OpMode’s intended model of operation. 

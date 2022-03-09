@@ -50,7 +50,7 @@ To save ourselves time and enhance our competitive performance, we use a few thi
 
 * [Official Documentation](https://www.firstinspires.org/resource-library/ftc/technology-information-and-resources)
 * [Official FTC SDK Javadocs](https://first-tech-challenge.github.io/SkyStone/doc/javadoc/index.html)
-* [Official Robot Controller Repository Wiki](https://github.com/FIRST-Tech-Challenge/SkyStone/wiki)
+* [Official Robot Controller Repository Wiki](https://github.com/FIRST-Tech-Challenge/FtcRobotController/wiki)
 * [Official Java Tutorials Playlist](https://www.youtube.com/playlist?list=PLEuGrYl8iBm7wW9gyxpLDhBJAOWDZid1P)
 * [_Intro to Control Theory_ by Wesley Aptekar-Cassels](https://blog.wesleyac.com/posts/intro-to-control-part-zero-whats-this)
 * [_Controls Engineering in FRC_ by Tyler Veness](https://file.tavsys.net/control/state-space-guide.pdf)

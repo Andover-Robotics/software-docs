@@ -53,7 +53,7 @@ public void runOpMode() {
 }
 ```
 
-For conventional TeleOp, we initialize our references to hardware devices in the `init()` method, and we send the received gamepad values to the output devices in the `loop()` method. FIRST's [example](https://github.com/FIRST-Tech-Challenge/SkyStone/blob/master/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples/BasicOpMode_Iterative.java) is an excellent reference for this paradigm.
+For conventional TeleOp, we initialize our references to hardware devices in the `init()` method, and we send the received gamepad values to the output devices in the `loop()` method. FIRST's [example](https://github.com/FIRST-Tech-Challenge/FtcRobotController/blob/master/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples/BasicOpMode_Iterative.java) is an excellent reference for this paradigm.
 
 ## Check your Understanding
 

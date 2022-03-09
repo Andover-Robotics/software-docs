@@ -20,7 +20,7 @@ There are many situations where a servo that is capable of rotating 180 degrees 
 
 ## Examples
 
-The following annotated examples demonstrate how to interact with the `Servo` interface according to the expected behaviors above. Feel free to refer to FTC's [official samples](https://github.com/FIRST-Tech-Challenge/SkyStone/tree/master/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples) for more guidance.
+The following annotated examples demonstrate how to interact with the `Servo` interface according to the expected behaviors above. Feel free to refer to FTC's [official samples](https://github.com/FIRST-Tech-Challenge/FtcRobotController/tree/master/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples) for more guidance.
 
 ```java
 public class Demo {
