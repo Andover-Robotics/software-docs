@@ -1,5 +1,5 @@
 ---
-description: It consists of a phone, an electronics hub, and another phone.
+summary: It consists of a phone, an electronics hub, and another phone.
 ---
 
 # The FTC Control System

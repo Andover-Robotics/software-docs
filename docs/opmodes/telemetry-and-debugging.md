@@ -1,5 +1,5 @@
 ---
-description: Troubleshooting is inevitable, so here are some tools.
+summary: Troubleshooting is inevitable, so here are some tools.
 ---
 
 # Telemetry and Debugging

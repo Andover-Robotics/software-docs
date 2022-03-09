@@ -1,5 +1,5 @@
 ---
-description: What happens on competition day?
+summary: What happens on competition day?
 ---
 
 # FTC Match Structure

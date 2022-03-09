@@ -1,5 +1,5 @@
 ---
-description: The OpMode that is not linear is iterative.
+summary: The OpMode that is not linear is iterative.
 ---
 
 # OpMode vs LinearOpMode

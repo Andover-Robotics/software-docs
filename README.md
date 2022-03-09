@@ -1,5 +1,5 @@
 ---
-description: Welcome! Let's make your robot smart.
+summary: Welcome! Let's make your robot smart.
 ---
 
 # Introduction

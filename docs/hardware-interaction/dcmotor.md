@@ -1,5 +1,5 @@
 ---
-description: It literally makes your robot move.
+summary: It literally makes your robot move.
 ---
 
 # DcMotor

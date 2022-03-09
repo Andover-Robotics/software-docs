@@ -1,3 +1,32 @@
 site_name: ARC Software
 theme:
   name: material
+nav:
+  - Introduction: 'index.md'
+  - The FTC Control System: 'the-ftc-control-system.md'
+  - Setting up the Environment: 'setting-up-the-environment.md'
+  - The OpMode:
+    - Introducing the OpMode: 'opmodes/defining-the-opmode.md'
+    - OpMode vs LinearOpMode: 'opmodes/opmode-vs-linearopmode.md'
+    - Telemetry and Debugging: 'opmodes/telemetry-and-debugging.md'
+    - Stopping LinearOpModes: 'opmodes/stopping-linearopmodes.md'
+  - Hardware Interaction:
+    - Hardware Configuration: 'hardware-interaction/configuration.md'
+    - DcMotor: 'hardware-interaction/dcmotor.md'
+    - Servos: 'hardware-interaction/servos.md'
+    - Sensors: 'hardware-interaction/sensors.md'
+    - Inertial Measurement Unit: 'hardware-interaction/inertial-measurement-unit.md'
+  - TeleOp:
+    - FTC Match Structure: 'teleop/ftc-match-structure.md'
+    - Accessing Gamepads: 'teleop/accessing-gamepads.md'
+    - The TeleOp Period: 'teleop/the-teleop-period.md'
+    - Finite State Machines: 'teleop/finite-state-machines.md'
+  - Autonomous:
+    - The Autonomous Period: 'autonomous/untitled.md'
+  - Virtual Robot Environment:
+    - Setting Up The Virtual Robot Environment: 'virtual-robot-environment/setting-it-up.md'
+    - Programming a Mecanum Drive: 'virtual-robot-environment/programming-a-mecanum-drive.md'
+  - Working with a Team:
+    - Integrate with your Team: 'working-with-a-team/integrate-with-your-team.md'
+    - Using Git Effectively: 'working-with-a-team/using-git-effectively.md'
+# TODO: floobits, code with me, optimizations

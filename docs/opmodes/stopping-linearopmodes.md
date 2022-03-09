@@ -1,5 +1,5 @@
 ---
-description: >-
+summary: >-
   Something to remember in every loop condition, or else your OpMode crashes at
   the end of Autonomous.
 ---
