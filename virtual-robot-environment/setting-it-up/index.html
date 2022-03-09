@@ -1,0 +1,940 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
+    
+    
+      
+        <title>Setting Up The Virtual Robot Environment - ARC Software</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2d9f7617.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#setting-up-the-virtual-robot-environment" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ARC Software" class="md-header__button md-logo" aria-label="ARC Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ARC Software
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Setting Up The Virtual Robot Environment
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ARC Software" class="md-nav__button md-logo" aria-label="ARC Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    ARC Software
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../the-ftc-control-system/" class="md-nav__link">
+        The FTC Control System
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setting-up-the-environment/" class="md-nav__link">
+        Setting up the Environment
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          The OpMode
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="The OpMode" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          The OpMode
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opmodes/defining-the-opmode/" class="md-nav__link">
+        Introducing the OpMode
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opmodes/opmode-vs-linearopmode/" class="md-nav__link">
+        OpMode vs LinearOpMode
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opmodes/telemetry-and-debugging/" class="md-nav__link">
+        Telemetry and Debugging
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opmodes/stopping-linearopmodes/" class="md-nav__link">
+        Stopping LinearOpModes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Hardware Interaction
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Hardware Interaction" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Hardware Interaction
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware-interaction/configuration/" class="md-nav__link">
+        Hardware Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware-interaction/dcmotor/" class="md-nav__link">
+        DcMotor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware-interaction/servos/" class="md-nav__link">
+        Servos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware-interaction/sensors/" class="md-nav__link">
+        Sensors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware-interaction/inertial-measurement-unit/" class="md-nav__link">
+        Inertial Measurement Unit
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          TeleOp
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="TeleOp" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          TeleOp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teleop/ftc-match-structure/" class="md-nav__link">
+        FTC Match Structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teleop/accessing-gamepads/" class="md-nav__link">
+        Accessing Gamepads
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teleop/the-teleop-period/" class="md-nav__link">
+        The TeleOp Period
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teleop/finite-state-machines/" class="md-nav__link">
+        Finite State Machines
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Autonomous
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Autonomous" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Autonomous
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../autonomous/the-autonomous-period/" class="md-nav__link">
+        The Autonomous Period
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Virtual Robot Environment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Virtual Robot Environment" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Virtual Robot Environment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Setting Up The Virtual Robot Environment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Setting Up The Virtual Robot Environment
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing" class="md-nav__link">
+    Installing
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-java-se-development-kit-8" class="md-nav__link">
+    Installing Java SE Development Kit 8
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-intellij" class="md-nav__link">
+    Installing IntelliJ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#downloading-the-virtual-robot-project" class="md-nav__link">
+    Downloading the Virtual Robot Project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-the-virtual-robot-environment_1" class="md-nav__link">
+    Setting Up The Virtual Robot Environment
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../programming-a-mecanum-drive/" class="md-nav__link">
+        Programming a Mecanum Drive
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Working with a Team
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Working with a Team" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Working with a Team
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../working-with-a-team/integrate-with-your-team/" class="md-nav__link">
+        Integrate with your Team
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../working-with-a-team/using-git-effectively/" class="md-nav__link">
+        Using Git Effectively
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing" class="md-nav__link">
+    Installing
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-java-se-development-kit-8" class="md-nav__link">
+    Installing Java SE Development Kit 8
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-intellij" class="md-nav__link">
+    Installing IntelliJ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#downloading-the-virtual-robot-project" class="md-nav__link">
+    Downloading the Virtual Robot Project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-the-virtual-robot-environment_1" class="md-nav__link">
+    Setting Up The Virtual Robot Environment
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="setting-up-the-virtual-robot-environment">Setting Up The Virtual Robot Environment</h1>
+<p>In this lesson, we will be teaching you how to set up your very own Virtual Robot Environment in the JetBrains IntelliJ IDEA so you can simulate a robot’s OpModes within the comfort of your own home.</p>
+<h2 id="installing">Installing</h2>
+<h3 id="installing-java-se-development-kit-8">Installing Java SE Development Kit 8</h3>
+<p>This section may be skipped if you already have the Java Development Kit.</p>
+<p>{% embed url="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html" %}</p>
+<p>Navigate to the link above and download the appropriate Java SE Development Kit 8u251 installer for your system.</p>
+<p><img alt="SE Development Kit Downloads" src="../../assets/se-development-kit.png" /></p>
+<p>Next, run the installer and follow the instructions to install the JDK.</p>
+<h3 id="installing-intellij">Installing IntelliJ</h3>
+<p>This section may be skipped if you already have IntelliJ installed.</p>
+<p>{% embed url="https://www.jetbrains.com/idea/" %}</p>
+<p>Navigate to the link above and click on the download button in the middle left.</p>
+<p><img alt="" src="../../assets/intellij.png" /></p>
+<p>Next, download the appropriate Community Version installer for your computer.</p>
+<p><img alt="Choose the Community Version to download." src="../../assets/intellij-community.png" /></p>
+<p>Run the installer and follow the instructions, accepting the defaults.</p>
+<h2 id="downloading-the-virtual-robot-project">Downloading the Virtual Robot Project</h2>
+<p>Next, we are going to download the Virtual Robot Project from Github. Go to the link below and click on the Clone or Download button.</p>
+<p>{% embed url="https://github.com/Beta8397/virtual_robot" %}</p>
+<p><img alt="" src="../../assets/Beta8397.png" /></p>
+<p>Copy the web URL to your clipboard, and run IntelliJ IDEA.</p>
+<p><img alt="" src="../../assets/clone.png" /></p>
+<p>Create a new project by selecting “Check out from Version Control” and then selecting Git.</p>
+<p><img alt="Creating a New Project" src="../../assets/new-project.png" /></p>
+<p>Paste the copied URL and press “Clone.” IntelliJ should open a new project. Next, try running the program by clicking on the green arrowhead in the upper toolbar.</p>
+<p><img alt="" src="../../assets/toolbar.png" /></p>
+<h2 id="setting-up-the-virtual-robot-environment_1">Setting Up The Virtual Robot Environment</h2>
+<p>Now we will be setting up the Virtual Robot Environment for this course’s use. First, navigate to the Config class on the left menu bar by opening <code>virtual_robot</code>, then <code>Controller</code>, then <code>config</code>. Double click on the <code>Config</code> class to open it.</p>
+<p><img alt="" src="../../assets/navigation.png" /></p>
+<p>In the <code>Config</code> class, change the boolean <code>USE_VIRTUAL_GAMEPAD</code> to true.</p>
+<p><img alt="" src="../../assets/config.png" /></p>
+<p>Finally, navigate to the <code>MecanumDrivingOpMode</code> class - open <code>TeamCode</code>, <code>src</code>, <code>org.firstinspires.ftc.teamcode</code>, <code>ftc16072</code>, and then double click on the <code>MecanumDrivingOpMode</code> class.</p>
+<p>Delete the contents of the <code>loop()</code> method. We will be writing our own version of this in Lesson 6.</p>
+<p><img alt="" src="../../assets/mecanum1.png" /></p>
+<p>Add the following fields to the <code>MecanumDrivingOpMode</code> class:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">private</span> <span class="n">DcMotor</span> <span class="n">motorFL</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">private</span> <span class="n">DcMotor</span> <span class="n">motorFR</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kd">private</span> <span class="n">DcMotor</span> <span class="n">motorBL</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kd">private</span> <span class="n">DcMotor</span> <span class="n">motorBR</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</code></pre></div>
+<p>Remove the fields <code>mecanumDrive</code> and <code>distances</code>. Your class should look something like this:</p>
+<p><img alt="" src="../../assets/mecanum2.png" /></p>
+<p>We are now going to init the DcMotors using a special class that helps you retrieve hardware devices from configuration in code. That’s right: it’s <code>hardwareMap</code>! (Revisit the <a href="../../hardware-interaction/configuration/">HardwareConfiguration</a> page for a quick reminder).</p>
+<p>We want to initialize the front left motor, the front right motor, the back left motor, and the back right motor. These are all <code>DcMotors</code>, and their names have been written as <code>front_left_motor</code>, <code>front_right_motor</code>, <code>back_left_motor</code>, and <code>back_right_motor</code> in the configuration.</p>
+<p>Try writing the init statements yourself now.</p>
+<p>Done?</p>
+<p>They should look something like this:</p>
+<p><img alt="" src="../../assets/init.png" /></p>
+<p>Recall that the hardwareMap class uses <code>.get()</code> to retrieve instances. Since we are initializing the <code>DcMotors</code>, we use <code>hardwareMap.dcMotor.get()</code>, and then place our motor’s name from the config in the parenthesis.</p>
+<p>We want to use encoders for our mecanum drive, so let’s add these lines to our init method as well:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">motorFL</span><span class="p">.</span><span class="na">setMode</span><span class="p">(</span><span class="n">DcMotor</span><span class="p">.</span><span class="na">RunMode</span><span class="p">.</span><span class="na">RUN_USING_ENCODER</span><span class="p">);</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">motorFR</span><span class="p">.</span><span class="na">setMode</span><span class="p">(</span><span class="n">DcMotor</span><span class="p">.</span><span class="na">RunMode</span><span class="p">.</span><span class="na">RUN_USING_ENCODER</span><span class="p">);</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">motorBL</span><span class="p">.</span><span class="na">setMode</span><span class="p">(</span><span class="n">DcMotor</span><span class="p">.</span><span class="na">RunMode</span><span class="p">.</span><span class="na">RUN_USING_ENCODER</span><span class="p">);</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">motorBR</span><span class="p">.</span><span class="na">setMode</span><span class="p">(</span><span class="n">DcMotor</span><span class="p">.</span><span class="na">RunMode</span><span class="p">.</span><span class="na">RUN_USING_ENCODER</span><span class="p">);</span>
+</code></pre></div>
+<p>Lastly, add these two lines to your init class:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">motorFL</span><span class="p">.</span><span class="na">setDirection</span><span class="p">(</span><span class="n">DcMotor</span><span class="p">.</span><span class="na">Direction</span><span class="p">.</span><span class="na">REVERSE</span><span class="p">);</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">motorBL</span><span class="p">.</span><span class="na">setDirection</span><span class="p">(</span><span class="n">DcMotor</span><span class="p">.</span><span class="na">Direction</span><span class="p">.</span><span class="na">REVERSE</span><span class="p">);</span>
+</code></pre></div>
+<p>All together, it should look something like this:</p>
+<p><img alt="" src="../../assets/init2.png" /></p>
+<p>Congratulations! You have set up your very own Virtual Robot Environment. In future lessons, we will teach you how to use it to simulate different OpModes, and you’ll learn how to write some yourself!</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../autonomous/the-autonomous-period/" class="md-footer__link md-footer__link--prev" aria-label="Previous: The Autonomous Period" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              The Autonomous Period
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../programming-a-mecanum-drive/" class="md-footer__link md-footer__link--next" aria-label="Next: Programming a Mecanum Drive" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Programming a Mecanum Drive
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.467223ff.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+      
+        <script src="../../js/katex.js"></script>
+      
+    
+  </body>
+</html>

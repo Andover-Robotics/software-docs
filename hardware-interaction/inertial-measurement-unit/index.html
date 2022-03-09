@@ -1,0 +1,945 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
+    
+    
+      
+        <title>Inertial Measurement Unit - ARC Software</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2d9f7617.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#inertial-measurement-unit" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ARC Software" class="md-header__button md-logo" aria-label="ARC Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ARC Software
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Inertial Measurement Unit
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ARC Software" class="md-nav__button md-logo" aria-label="ARC Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    ARC Software
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../the-ftc-control-system/" class="md-nav__link">
+        The FTC Control System
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setting-up-the-environment/" class="md-nav__link">
+        Setting up the Environment
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          The OpMode
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="The OpMode" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          The OpMode
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opmodes/defining-the-opmode/" class="md-nav__link">
+        Introducing the OpMode
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opmodes/opmode-vs-linearopmode/" class="md-nav__link">
+        OpMode vs LinearOpMode
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opmodes/telemetry-and-debugging/" class="md-nav__link">
+        Telemetry and Debugging
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opmodes/stopping-linearopmodes/" class="md-nav__link">
+        Stopping LinearOpModes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Hardware Interaction
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Hardware Interaction" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Hardware Interaction
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        Hardware Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dcmotor/" class="md-nav__link">
+        DcMotor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../servos/" class="md-nav__link">
+        Servos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sensors/" class="md-nav__link">
+        Sensors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Inertial Measurement Unit
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Inertial Measurement Unit
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dimensions" class="md-nav__link">
+    Dimensions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initialization" class="md-nav__link">
+    Initialization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reading-angles" class="md-nav__link">
+    Reading Angles
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-your-understanding" class="md-nav__link">
+    Check Your Understanding
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          TeleOp
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="TeleOp" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          TeleOp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teleop/ftc-match-structure/" class="md-nav__link">
+        FTC Match Structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teleop/accessing-gamepads/" class="md-nav__link">
+        Accessing Gamepads
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teleop/the-teleop-period/" class="md-nav__link">
+        The TeleOp Period
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teleop/finite-state-machines/" class="md-nav__link">
+        Finite State Machines
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Autonomous
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Autonomous" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Autonomous
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../autonomous/the-autonomous-period/" class="md-nav__link">
+        The Autonomous Period
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Virtual Robot Environment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Virtual Robot Environment" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Virtual Robot Environment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../virtual-robot-environment/setting-it-up/" class="md-nav__link">
+        Setting Up The Virtual Robot Environment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../virtual-robot-environment/programming-a-mecanum-drive/" class="md-nav__link">
+        Programming a Mecanum Drive
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Working with a Team
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Working with a Team" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Working with a Team
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../working-with-a-team/integrate-with-your-team/" class="md-nav__link">
+        Integrate with your Team
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../working-with-a-team/using-git-effectively/" class="md-nav__link">
+        Using Git Effectively
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dimensions" class="md-nav__link">
+    Dimensions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initialization" class="md-nav__link">
+    Initialization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reading-angles" class="md-nav__link">
+    Reading Angles
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-your-understanding" class="md-nav__link">
+    Check Your Understanding
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="inertial-measurement-unit">Inertial Measurement Unit</h1>
+<p>The <strong>Inertial Measurement Unit</strong> of a REV Expansion Hub is an electronic device that measures the following physical attributes:</p>
+<ul>
+<li>Absolute Orientation</li>
+<li>Angular Velocity</li>
+<li>Linear Acceleration</li>
+<li>Magnetic Field Strength</li>
+<li>Gravity</li>
+<li>Temperature</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Although the IMU is capable of measuring linear acceleration, it is not optimal for measuring displacement due to inaccuracies. Consider a scenario where a robot stays at rest. The measured linear acceleration is supposed to be 0, but it may fluctuate around 0 due to signal noise, causing minor changes in velocity that in turn causes the calculated displacement to deviate from the resting position at a steady rate. When the robot accelerates, inaccuracies like these add up over time, reducing the usefulness of the displacement measurements. <strong>Do not rely on linear acceleration measurements from the IMU for displacement feedback.</strong></p>
+</div>
+<p><strong>The IMU is</strong> <a href="https://github.com/OpenFTC/OpenRC-Turbo/blob/324ed36fa4c1adb305c026f52b746acd4692e88a/Hardware/src/main/java/com/qualcomm/hardware/bosch/BNO055IMU.java#L71"><strong>useful</strong></a> <strong>for rotation feedback</strong>, so you can use its angular orientation measurements to help your robot execute perfect turns during autonomous. You can also use the IMU to enable field-centric movement control during TeleOp, which may reduce driver cognitive workload for certain applications and improve scoring performance.</p>
+<h2 id="dimensions">Dimensions</h2>
+<p>The following video from FIRST demonstrates how each rotational axis (heading, roll, and pitch) corresponds to the physical dimensions of the REV Expansion Hub.</p>
+<p><iframe src="https://youtube.com/embed/eN7fQnQ8zeg" style="position: relative; width: 100%; height: 22.172vw" frameborder="0" allowfullscreen></iframe></p>
+<h2 id="usage">Usage</h2>
+<h3 id="initialization">Initialization</h3>
+<p>The IMU behaves slightly differently compared to other sensors—you need to explicitly initialize it in addition to retrieving the object from <code>hardwareMap</code> before reading measurements. Check out this <a href="https://github.com/Andover-Robotics/4410-Skystone/blob/master/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/Bot.java#L101">function definition</a> from ARC Lightning 2019-2020, where we call <code>imu.initialize(parameters)</code> to prepare it for normal operation. For reference, here is a more comprehensive example of how to initialize your IMU. Ideally, you should do it when getting all hardware devices from <code>hardwareMap</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Retrieve the IMU object from the hardware map</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1">// Hint: you usually do not need to add this entry into your hardware configuration. It should already be there.</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">BNO055IMU</span> <span class="n">imu</span> <span class="o">=</span> <span class="n">hardwareMap</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">BNO055IMU</span><span class="p">.</span><span class="na">class</span><span class="p">,</span> <span class="s">&quot;imu&quot;</span><span class="p">);</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">// `imu` is a variable in this example, but it is most likely a field in your code. Omit the type (`BNO055IMU`) in order to assign to the field.</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1">// Make a new parameters object to store your preferences</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">BNO055IMU</span><span class="p">.</span><span class="na">Parameters</span> <span class="n">params</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BNO055IMU</span><span class="p">.</span><span class="na">Parameters</span><span class="p">();</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1">// Set the unit of all angles retrieved from the IMU.</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1">// !: If you want to integrate with Road Runner, use RADIANS instead of DEGREES</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">params</span><span class="p">.</span><span class="na">angleUnit</span> <span class="o">=</span> <span class="n">BNO055IMU</span><span class="p">.</span><span class="na">AngleUnit</span><span class="p">.</span><span class="na">DEGREES</span><span class="p">;</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1">// Initialize the IMU with your parameters</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="n">imu</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="n">params</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="reading-angles">Reading Angles</h3>
+<p>Before beginning to read angles from the IMU, you need to determine the rotational axis to which the robot's heading corresponds. According to the video above, the robot's heading corresponds to the Z-axis if the hub is mounted with the words "EXPANSION HUB" facing up, and it corresponds to the X-axis if the hub is mounted with the words facing horizontally.</p>
+<p>To read angular orientation measurements from the IMU, we use the <code>getAngularOrientation</code> method. It is possible to call this method with no parameters, but to make your code less ambiguous, we recommend supplying the three parameters.</p>
+<ol>
+<li>The first parameter should be <code>AxesReference.INTRINSIC</code>, as found in the official usage example.</li>
+<li>The second parameter depends on the rotational axis to be read. If you intend to read the Z-axis, use <code>AxesOrder.ZYX</code>. If you intend to read the X-axis, use <code>AxesOrder.XYZ</code>.</li>
+<li>The third parameter depends on how you intend to use the retrieved values. If you will use trigonometric functions with them, it is a good idea to use <code>AngleUnit.RADIANS</code>. Otherwise, it might be more intuitive to use <code>AngleUnit.DEGREES</code>.</li>
+</ol>
+<p>Once you have retrieved the angular orientation data in an <code>Orientation</code> object, you can access the heading of the robot with the <code>firstAngle</code> field. The range of values for this field is <span class="arithmatex">\([-180, 180]\)</span> for degrees and <span class="arithmatex">\([-\pi, \pi]\)</span> for radians. The initial orientation of the hub will take on a value of 0, and the positive direction corresponds to counter-clockwise rotation. Examine the video above for more intuition.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// Obtain the orientation from the hub. The first angle shall be the X-axis reading. The unit of the first angle value should be degrees.</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">Orientation</span> <span class="n">orient</span> <span class="o">=</span> <span class="n">imu</span><span class="p">.</span><span class="na">getOrientation</span><span class="p">(</span><span class="n">AxesReference</span><span class="p">.</span><span class="na">INTRINSIC</span><span class="p">,</span> <span class="n">AxesOrder</span><span class="p">.</span><span class="na">XYZ</span><span class="p">,</span> <span class="n">AngleUnit</span><span class="p">.</span><span class="na">DEGREES</span><span class="p">);</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">// `angle` is the heading of the robot in degrees</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="kt">double</span> <span class="n">angle</span> <span class="o">=</span> <span class="n">orient</span><span class="p">.</span><span class="na">firstAngle</span><span class="p">;</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Since the angle output is constrained to <span class="arithmatex">\([-180, 180]\)</span> or <span class="arithmatex">\([-\pi, \pi]\)</span>, the reading will wrap around the possible range when crossing an extremum. For example, if you were to keep track of the angle reading when the robot performs a full clockwise rotation, the reading would reach -180 degrees and immediately jump to 180 degrees. It is very possible that the robot might cross this heading when executing autonomous turns, so it is important to take the wraparound into consideration when programming.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Q: Why do we have to use <code>firstAngle</code> to refer to the heading? If we need to access the Z-axis, couldn't we have <code>AxesOrder.XYZ</code> and use <code>thirdAngle</code>?</p>
+<p>A: We have chosen <code>firstAngle</code> as our convention because of Road Runner. Road Runner Quickstart's FTC integration classes implement the <code>getExternalHeading</code> method by accessing the <code>firstAngle</code> of the input <code>Orientation</code>. It is a good idea to share the <code>BNO055IMU</code> instance used by Road Runner, since it is redundant to initialize another instance during a match. To minimize ambiguity and hide the implementation details of <code>Orientation</code>, you are free to wrap the access logic in your own class.</p>
+</div>
+<p>For a complete reference of the <code>BNO055IMU</code> class, check out the following source file from OpenFTC. Since the class is technically not part of the official <code>org.firstinspires</code> packages, you cannot find it in the official JavaDocs. Instead, you can read the inline JavaDoc source located in its extracted source file below:</p>
+<p>{% embed url="https://github.com/OpenFTC/OpenRC-Turbo/blob/324ed36fa4c1adb305c026f52b746acd4692e88a/Hardware/src/main/java/com/qualcomm/hardware/bosch/BNO055IMU.java" caption="" %}</p>
+<h2 id="check-your-understanding">Check Your Understanding</h2>
+<ol>
+<li>What IMU measurement is the most useful in FTC? How could you use this measurement to improve performance?</li>
+<li>If you are currently working on a robot, which axis (<span class="arithmatex">\(X\)</span>, <span class="arithmatex">\(Y\)</span>, or <span class="arithmatex">\(Z\)</span>) of the Expansion Hub corresponds to the robot's heading?</li>
+<li>Given an initialized <code>BNO055IMU</code> instance assigned to a field named <code>imu</code>, retrieve the X-axis angular orientation reading in degrees and normalize it to the range <span class="arithmatex">\([0, 360]\)</span>.</li>
+</ol>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../sensors/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Sensors" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Sensors
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../teleop/ftc-match-structure/" class="md-footer__link md-footer__link--next" aria-label="Next: FTC Match Structure" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              FTC Match Structure
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.467223ff.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+      
+        <script src="../../js/katex.js"></script>
+      
+    
+  </body>
+</html>

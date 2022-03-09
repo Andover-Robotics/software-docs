@@ -1,0 +1,874 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
+    
+    
+      
+        <title>Accessing Gamepads - ARC Software</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2d9f7617.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#accessing-gamepads" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ARC Software" class="md-header__button md-logo" aria-label="ARC Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ARC Software
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Accessing Gamepads
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ARC Software" class="md-nav__button md-logo" aria-label="ARC Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    ARC Software
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../the-ftc-control-system/" class="md-nav__link">
+        The FTC Control System
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setting-up-the-environment/" class="md-nav__link">
+        Setting up the Environment
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          The OpMode
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="The OpMode" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          The OpMode
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opmodes/defining-the-opmode/" class="md-nav__link">
+        Introducing the OpMode
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opmodes/opmode-vs-linearopmode/" class="md-nav__link">
+        OpMode vs LinearOpMode
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opmodes/telemetry-and-debugging/" class="md-nav__link">
+        Telemetry and Debugging
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opmodes/stopping-linearopmodes/" class="md-nav__link">
+        Stopping LinearOpModes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Hardware Interaction
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Hardware Interaction" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Hardware Interaction
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware-interaction/configuration/" class="md-nav__link">
+        Hardware Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware-interaction/dcmotor/" class="md-nav__link">
+        DcMotor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware-interaction/servos/" class="md-nav__link">
+        Servos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware-interaction/sensors/" class="md-nav__link">
+        Sensors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware-interaction/inertial-measurement-unit/" class="md-nav__link">
+        Inertial Measurement Unit
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          TeleOp
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="TeleOp" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          TeleOp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ftc-match-structure/" class="md-nav__link">
+        FTC Match Structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Accessing Gamepads
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Accessing Gamepads
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reading-the-gamepad" class="md-nav__link">
+    Reading the Gamepad
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relaying-inputs-in-an-iterative-opmode" class="md-nav__link">
+    Relaying Inputs in an iterative OpMode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples-from-ftc-and-the-club" class="md-nav__link">
+    Examples from FTC and the Club
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../the-teleop-period/" class="md-nav__link">
+        The TeleOp Period
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../finite-state-machines/" class="md-nav__link">
+        Finite State Machines
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Autonomous
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Autonomous" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Autonomous
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../autonomous/the-autonomous-period/" class="md-nav__link">
+        The Autonomous Period
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Virtual Robot Environment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Virtual Robot Environment" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Virtual Robot Environment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../virtual-robot-environment/setting-it-up/" class="md-nav__link">
+        Setting Up The Virtual Robot Environment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../virtual-robot-environment/programming-a-mecanum-drive/" class="md-nav__link">
+        Programming a Mecanum Drive
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Working with a Team
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Working with a Team" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Working with a Team
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../working-with-a-team/integrate-with-your-team/" class="md-nav__link">
+        Integrate with your Team
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../working-with-a-team/using-git-effectively/" class="md-nav__link">
+        Using Git Effectively
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reading-the-gamepad" class="md-nav__link">
+    Reading the Gamepad
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relaying-inputs-in-an-iterative-opmode" class="md-nav__link">
+    Relaying Inputs in an iterative OpMode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples-from-ftc-and-the-club" class="md-nav__link">
+    Examples from FTC and the Club
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="accessing-gamepads">Accessing Gamepads</h1>
+<h2 id="reading-the-gamepad">Reading the Gamepad</h2>
+<p>To perform in TeleOp, your code needs to be able to read inputs from the driver's handheld controllers in real time. This is accomplished by accessing the fields of two instances of  the<code>Gamepad class</code> in the <code>TeleOp</code> class: <code>gamepad1</code> and <code>gamepad2</code>. Both of these fields will have been initialized by the FTC Robot Controller app while the program is initializing, so you do not have to worry about their initialization and may program under the assumption that they are non-null instances of the <code>Gamepad</code> class.&#x20;</p>
+<p>How do you know which controller is <code>gamepad1</code> and which is <code>gamepad2</code>? These fields correspond to the <em>User 1</em> and <em>User 2</em> registrations on the Driver Station, which may be set up by the drivers on the FTC Driver Station app before the program is initialized; see FTC's <a href="https://github.com/FIRST-Tech-Challenge/FtcRobotController/wiki/Creating-and-Running-an-Op-Mode-(Android-Studio">wiki page</a>#running-your-op-mode-with-a-gamepad-connected) on how these registrations work.</p>
+<p>{% embed url="https://ftctechnh.github.io/ftc_app/doc/javadoc/com/qualcomm/robotcore/hardware/Gamepad.html" %}
+JavaDocs for the Gamepad class
+{% endembed %}</p>
+<p><img alt="Control columns of a F310 Gamepad (from Modern Robotics)" src="../../assets/image%20%2817%29.png" /></p>
+<p>Notice how each control column on a standard Gamepad is reflected with a field in <code>Gamepad</code>. The values for these fields are updated in real time as your OpMode executes, so accessing them at any time will yield the most up-to-date data from the controller itself. For example, the following expression is <code>true</code> whenever the "X" button of Gamepad 1 is pressed:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">gamepad1</span><span class="p">.</span><span class="na">x</span>
+</code></pre></div>
+<p>Different inputs on controllers will correspond to different data types. Knowing which field of the <code>Gamepad</code> class will result in which data type is essential to a functioning TeleOp.</p>
+<p>The controllers' buttons-X, A, B, Y, Back, and Stop-are <strong>booleans</strong>. Thus, <code>gamepad1.x</code>, <code>gamepad1.a</code>, <code>gamepad1.b</code>, <code>gamepad1.y</code>, <code>gamepad1.back</code>,  and<code>gamepad1.start</code>, respectively, will be <code>true</code> if the button is pressed and <code>false</code> otherwise.</p>
+<p>The left and right bumpers, too, are <strong>booleans</strong>. Thus, <code>gamepad1.left_bumper</code> and <code>gamepad1.right_bumper</code>  will be <code>true</code> if the bumper is pressed and <code>false</code> otherwise.&#x20;</p>
+<p>The x and y axes values of each joystick is a <strong>double, ranging between -1 and 1.</strong> The <strong>center</strong> of an axis is at the value <strong>0</strong>. The x and y values of the left and right sticks may be read from the following fields: <code>gamepad1.left_stick_x</code>, <code>gamepad1.left_stick_y</code>, <code>gamepad1.right_stick_x</code>, and<code>gamepad1.right_stick_y</code>. If the joysticks were in the positions shown in the image above, all four of these expressions would evaluate to 0.&#x20;</p>
+<p>The values of the left and right triggers, too, are <strong>doubles, ranging between 0 and 1.</strong> <code>gamepad1.left_trigger</code> and <code>gamepad1.right_trigger</code> would give 0 if the triggers were unpressed, 1 if they were pressed fully to the ground, and a decimal value in between the two if the trigger were not fully pressed.</p>
+<p>Finally, the D-pad buttons give <strong>boolean</strong> values. <code>gamepad1.dpad_up</code>, <code>gamepad1.dpad_right</code>, <code>gamepad1.dpad_down</code>, and <code>gamepad1.dpad_left</code> will each give true if the corresponding region of the dpad is pressed and false otherwise.</p>
+<h2 id="relaying-inputs-in-an-iterative-opmode">Relaying Inputs in an iterative OpMode</h2>
+<p>Recall that in an iterative OpMode, the <code>loop()</code> method is executed repeatedly when the OpMode is running. Given that the values in <code>gamepad1</code> and <code>gamepad2</code> are constantly updated, we can conveniently relay the state of input columns to output devices. Consider the following example of a simple tank-drive control scheme implementation:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">public</span> <span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  <span class="n">leftMotor</span><span class="p">.</span><span class="na">setPower</span><span class="p">(</span><span class="o">-</span><span class="n">gamepad1</span><span class="p">.</span><span class="na">left_stick_y</span><span class="p">);</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  <span class="n">rightMotor</span><span class="p">.</span><span class="na">setPower</span><span class="p">(</span><span class="o">-</span><span class="n">gamepad1</span><span class="p">.</span><span class="na">right_stick_y</span><span class="p">);</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">}</span>
+</code></pre></div>
+<p>In this example, we simply pass the values of the fields of <code>gamepad1</code> to the two drivetrain motors repeatedly. Whenever a driver pushes the left stick forward, <code>leftMotor</code> receives a positive power value; whenever a driver pushes the right stick forward, <code>rightMotor</code> receives a positive power value.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Notice how the <span class="arithmatex">\(y\)</span> axes of the gamepad sticks are inverted: pushing the stick forward will cause the corresponding field to have a negative value. We typically need to negate the field in code whenever we wish to access these control axes.</p>
+</div>
+<h2 id="examples-from-ftc-and-the-club">Examples from FTC and the Club</h2>
+<p>Examine the following examples from both <em>FIRST</em> and the club's previous programs. Try to understand each control scheme and imagine explaining it to a potential driver—the control scheme of your robot is something <strong>you</strong> will need to negotiate!</p>
+<ul>
+<li><a href="https://github.com/FIRST-Tech-Challenge/FtcRobotController/blob/master/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples/BasicOpMode_Iterative.java#L113"><em>Basic Iterative OpMode example</em></a>, from FIRST</li>
+<li><strong><a href="https://github.com/ARC-Thunder/Rover-Ruckus/blob/master/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/MainTeleOp.java#L64"><em>ARC Thunder's TeleOp for Rover Ruckus</em></a></strong></li>
+<li><strong><a href="https://github.com/AHSHailstorm/ARC-Hailstorm2017-2018/blob/master/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/HailstormBasicTeleOp2017_2018.java#L50"><em>ARC Hailstorm's TeleOp for Relic Recovery</em></a></strong></li>
+<li><strong><a href="https://github.com/Andover-Robotics/ARC-Thunder-2016-2017/blob/master/ThunderBasicTeleOp2016_2017.java#L75"><em>ARC Thunder's TeleOp for Velocity Vortex</em></a></strong></li>
+</ul>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../ftc-match-structure/" class="md-footer__link md-footer__link--prev" aria-label="Previous: FTC Match Structure" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              FTC Match Structure
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../the-teleop-period/" class="md-footer__link md-footer__link--next" aria-label="Next: The TeleOp Period" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              The TeleOp Period
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.467223ff.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+      
+        <script src="../../js/katex.js"></script>
+      
+    
+  </body>
+</html>

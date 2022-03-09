@@ -1,0 +1,1156 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
+    
+    
+      
+        <title>DcMotor - ARC Software</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2d9f7617.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dcmotor" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ARC Software" class="md-header__button md-logo" aria-label="ARC Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ARC Software
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              DcMotor
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ARC Software" class="md-nav__button md-logo" aria-label="ARC Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    ARC Software
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../the-ftc-control-system/" class="md-nav__link">
+        The FTC Control System
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setting-up-the-environment/" class="md-nav__link">
+        Setting up the Environment
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          The OpMode
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="The OpMode" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          The OpMode
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opmodes/defining-the-opmode/" class="md-nav__link">
+        Introducing the OpMode
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opmodes/opmode-vs-linearopmode/" class="md-nav__link">
+        OpMode vs LinearOpMode
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opmodes/telemetry-and-debugging/" class="md-nav__link">
+        Telemetry and Debugging
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opmodes/stopping-linearopmodes/" class="md-nav__link">
+        Stopping LinearOpModes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Hardware Interaction
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Hardware Interaction" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Hardware Interaction
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        Hardware Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          DcMotor
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        DcMotor
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#our-motors" class="md-nav__link">
+    Our Motors
+  </a>
+  
+    <nav class="md-nav" aria-label="Our Motors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gobilda-yellow-jacket-gear-motor" class="md-nav__link">
+    goBILDA Yellow Jacket Gear Motor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-behavior" class="md-nav__link">
+    Basic Behavior
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zero-power-behavior" class="md-nav__link">
+    Zero Power Behavior
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encoder-based-operation" class="md-nav__link">
+    Encoder-based Operation
+  </a>
+  
+    <nav class="md-nav" aria-label="Encoder-based Operation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#run-modes" class="md-nav__link">
+    Run Modes
+  </a>
+  
+    <nav class="md-nav" aria-label="Run Modes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#run-without-encoder" class="md-nav__link">
+    Run Without Encoder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop-and-reset-encoder" class="md-nav__link">
+    Stop and Reset Encoder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-using-encoder" class="md-nav__link">
+    Run Using Encoder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-to-position" class="md-nav__link">
+    Run To Position
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-your-understanding" class="md-nav__link">
+    Check your Understanding
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../servos/" class="md-nav__link">
+        Servos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sensors/" class="md-nav__link">
+        Sensors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inertial-measurement-unit/" class="md-nav__link">
+        Inertial Measurement Unit
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          TeleOp
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="TeleOp" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          TeleOp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teleop/ftc-match-structure/" class="md-nav__link">
+        FTC Match Structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teleop/accessing-gamepads/" class="md-nav__link">
+        Accessing Gamepads
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teleop/the-teleop-period/" class="md-nav__link">
+        The TeleOp Period
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teleop/finite-state-machines/" class="md-nav__link">
+        Finite State Machines
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Autonomous
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Autonomous" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Autonomous
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../autonomous/the-autonomous-period/" class="md-nav__link">
+        The Autonomous Period
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Virtual Robot Environment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Virtual Robot Environment" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Virtual Robot Environment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../virtual-robot-environment/setting-it-up/" class="md-nav__link">
+        Setting Up The Virtual Robot Environment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../virtual-robot-environment/programming-a-mecanum-drive/" class="md-nav__link">
+        Programming a Mecanum Drive
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Working with a Team
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Working with a Team" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Working with a Team
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../working-with-a-team/integrate-with-your-team/" class="md-nav__link">
+        Integrate with your Team
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../working-with-a-team/using-git-effectively/" class="md-nav__link">
+        Using Git Effectively
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#our-motors" class="md-nav__link">
+    Our Motors
+  </a>
+  
+    <nav class="md-nav" aria-label="Our Motors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gobilda-yellow-jacket-gear-motor" class="md-nav__link">
+    goBILDA Yellow Jacket Gear Motor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-behavior" class="md-nav__link">
+    Basic Behavior
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zero-power-behavior" class="md-nav__link">
+    Zero Power Behavior
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encoder-based-operation" class="md-nav__link">
+    Encoder-based Operation
+  </a>
+  
+    <nav class="md-nav" aria-label="Encoder-based Operation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#run-modes" class="md-nav__link">
+    Run Modes
+  </a>
+  
+    <nav class="md-nav" aria-label="Run Modes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#run-without-encoder" class="md-nav__link">
+    Run Without Encoder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop-and-reset-encoder" class="md-nav__link">
+    Stop and Reset Encoder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-using-encoder" class="md-nav__link">
+    Run Using Encoder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-to-position" class="md-nav__link">
+    Run To Position
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-your-understanding" class="md-nav__link">
+    Check your Understanding
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="dcmotor">DcMotor</h1>
+<p>In the world of FTC, the <code>DcMotor</code> is perhaps the most important type of electronic device. From locomotion to game-specific mechanisms, nearly all tasks in FTC require the use of a <code>DcMotor</code> somewhere in the design. It is therefore crucial that you understand how to effectively interact with motors, what to expect from them, and how to troubleshoot them in the case of a failure.</p>
+<p>The term <code>DcMotor</code> refers to the name of a class in the FTC SDK. This class describes a physical motor, an actuator that causes the rotation of an axle.</p>
+<p>{% embed url="https://first-tech-challenge.github.io/SkyStone/doc/javadoc/com/qualcomm/robotcore/hardware/DcMotor.html" %}</p>
+<h2 id="our-motors">Our Motors</h2>
+<details>
+
+<summary>Old motors</summary>
+
+### Tetrix DC Gear Motor
+
+![A Tetrix DC Gear Motor (from Pitsco)](../assets/image (14).png)
+
+The club has a great abundance of these motors. Since most of them do not include an encoder, they are unsuitable for consistent autonomous operation or automatic speed control.
+
+### Neverest Gearmotor
+
+![A Neverest 40 Gearmotor (from AndyMark)](../assets/image (15).png)
+
+Recently, the club has obtained many Neverest Gearmotors for more rigorous use cases, such as powering the drivetrain. These have attached encoders that **require 5V to run**. This means that a level shifter is required in order to operate these encoders using REV Expansion Hubs.
+
+</details>
+
+<h3 id="gobilda-yellow-jacket-gear-motor">goBILDA Yellow Jacket Gear Motor</h3>
+<p><img alt="A 13.7:1 ratio Yellow Jacket Gear Motor (from goBILDA)" src="../../assets/image%20%2816%29.png" /></p>
+<p>When developing ARC Thunder's robot for World Championships, we began using these motors to power some mechanisms. They have built-in encoders that work with both 3.3V and 5V, so no level shifter is needed in any scenario. ARC has Yellow Jacket Gear Motors in several gear ratios, meaning that there is a wide range of proportions between speed and torque when selecting these motors. As of the 2020-2021 season, the Yellow Jacket Gear Motor is projected to become the club's default motor choice.</p>
+<h2 id="basic-behavior">Basic Behavior</h2>
+<p>Let's first examine the interface of <a href="https://ftctechnh.github.io/ftc_app/doc/javadoc/com/qualcomm/robotcore/hardware/DcMotorSimple.html">DcMotorSimple</a>, which describes the functionality of a motor at the minimum level. At any instant, a motor has two properties: <strong>direction</strong> and <strong>power</strong>.</p>
+<p><strong>Direction</strong> describes the direction of rotation that the motor will cause, given a positive power value. The possible values of direction are <em>Forward</em> and <em>Reverse</em>.</p>
+<p><strong>Power</strong> describes the amount of power that is supplied to the motor in either direction. The possible values of power <span class="arithmatex">\(p\)</span> satisfy the inequality <span class="arithmatex">\(-1\leq p\leq 1\)</span>, where <span class="arithmatex">\(1\)</span> represents the most power in the current direction, <span class="arithmatex">\(0\)</span> represents a lack of power, and <span class="arithmatex">\(-1\)</span> represents the most power in the opposite of the current direction.</p>
+<p>For example, given that a motor spins clockwise when the direction is <em>Forward</em> and the power is positive, it would also spin clockwise when the direction is <em>Reverse</em> and the power is negative. In any other scenario, it would either spin counter-clockwise or not have any power given.</p>
+<p>This combination of power and direction to determine the actual direction of rotation is useful for the chassis. Since the motors on opposite sides of the robot face opposite directions, setting all their directions to <em>Forward</em> and sending a positive power value will cause them to turn the robot in place. This is counter-intuitive for programmers, who would like to assume that giving the same power to all chassis motors causes the robot to move instead of turn. To resolve this issue, we typically set the directions of the chassis motors on one side to <em>Reverse</em> such that sending a positive power value to all chassis motors causes the robot to move forward.</p>
+<h2 id="zero-power-behavior">Zero Power Behavior</h2>
+<p>{% embed url="https://ftctechnh.github.io/ftc_app/doc/javadoc/com/qualcomm/robotcore/hardware/DcMotor.ZeroPowerBehavior.html" %}</p>
+<p>FTC motors allow you to customize their behavior when the power given is 0. The <strong>brake</strong> option tells the motor to actively resist any rotational motion when the power is 0, whereas the <strong>float</strong> option simply cuts power from the motor and allows external forces to accelerate or decelerate rotation with minimal resistance.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>If it is very important that a motor holds its position in certain situations, setting up <code>RUN_TO_POSITION</code> with the target position set to the current position is typically more effective. This way, the motor automatically applies power to cancel out any external forces that are acting on it. See Encoder-based Operation for more details.</p>
+</div>
+<h2 id="encoder-based-operation">Encoder-based Operation</h2>
+<p>An <a href="https://en.wikipedia.org/wiki/Rotary_encoder"><strong>encoder</strong> </a>is a device that measures the angular position of an axle. In FTC, we use encoders regularly to rotate motors in precise amounts, enact software limits to avoid damage, or require motors to hold a constant rotational speed.</p>
+<p>Because of how encoders work internally, the numerical output from an encoder is called a <strong>tick</strong>. Each type of motor has a different <strong>ticks-per-revolution (TPR)</strong> constant, which is the number of ticks that are emitted as a result of one 360-degree revolution of the motor output axle. For example, the Neverest 40 Gearmotor has a TPR constant of <span class="arithmatex">\(1120\)</span>, so if the encoder's output is <span class="arithmatex">\(4816\)</span>, the number of revolutions would be <span class="arithmatex">\(\frac{4816}{1120}=4.3\)</span>, and the number of degrees rotated would be<span class="arithmatex">\(4.3\times 360=1548^\circ\)</span>. When tick readings are negative, the net amount of rotation of the motor's output axle is in the opposite direction of the current direction value.</p>
+<p>In the <code>DcMotor</code> interface, the method <a href="https://ftctechnh.github.io/ftc_app/doc/javadoc/com/qualcomm/robotcore/hardware/DcMotor.html#getCurrentPosition--"><code>getCurrentPosition</code></a> returns the current tick reading of the motor. If the motor's encoder does not exist or is not plugged in correctly, <code>getCurrentPosition</code> always returns 0.</p>
+<h3 id="run-modes">Run Modes</h3>
+<p>{% embed url="https://ftctechnh.github.io/ftc_app/doc/javadoc/com/qualcomm/robotcore/hardware/DcMotor.RunMode.html" %}
+JavaDocs for the RunMode enum from the FTC SDK
+{% endembed %}</p>
+<p>At any instant, a <code>DcMotor</code> must be in one of four possible run modes: <code>RUN_WITHOUT_ENCODER</code>, <code>STOP_AND_RESET_ENCODER</code>, <code>RUN_USING_ENCODER</code>, and <code>RUN_TO_POSITION</code>. These modes determine how the motor interprets power values. We can retrieve the current run mode of a motor using <a href="https://ftctechnh.github.io/ftc_app/doc/javadoc/com/qualcomm/robotcore/hardware/DcMotor.html#getMode--"><code>DcMotor.getMode</code></a>, and we can set the run mode of a motor using <a href="https://ftctechnh.github.io/ftc_app/doc/javadoc/com/qualcomm/robotcore/hardware/DcMotor.html#setMode-com.qualcomm.robotcore.hardware.DcMotor.RunMode-"><code>DcMotor.setMode</code></a>.</p>
+<h4 id="run-without-encoder">Run Without Encoder</h4>
+<p>The <code>RUN_WITHOUT_ENCODER</code> mode is the most straightforward one—in this mode, the power value is interpreted as the amount of electric power that is sent to the motor. A power value of 1 or -1 means that the maximum power available from the battery is sent to the motor.</p>
+<h4 id="stop-and-reset-encoder">Stop and Reset Encoder</h4>
+<p>After setting a motor's mode to <code>STOP_AND_RESET_ENCODER</code>, the effective power is set to zero, and the encoder starts to interpret the current rotational position as zero ticks. You should not try to set the power value of a motor when it is in this mode.</p>
+<h4 id="run-using-encoder">Run Using Encoder</h4>
+<p>In the <code>RUN_USING_ENCODER</code> mode, power values are interpreted as velocity, not electrical power. In this mode, a power value of 1 means that the motor should maintain the highest possible angular velocity in the current direction setting, and a power value of 0.5 means half of this velocity.</p>
+<p>Note that since motors have to exert more power to maintain a certain velocity if there is strong resistance, the highest angular velocity in this mode is capped to be slightly lower than the maximum angular velocity achievable with maximum electrical power and minimal resistance.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When making a configuration for REV Expansion Hubs, you are asked to select the motor's type for each added motor. This type determines the highest angular velocity in the <code>RUN_USING_ENCODER</code> and <code>RUN_TO_POSITION</code> modes. If this velocity appears to be too small for a motor, check its selected type in the active configuration.</p>
+</div>
+<h4 id="run-to-position">Run To Position</h4>
+<p>Using the <code>RUN_TO_POSITION</code> mode, you can have the motor automatically reach a specific <strong>target position</strong> in encoder ticks. To set the target position of a motor, call <a href="https://ftctechnh.github.io/ftc_app/doc/javadoc/com/qualcomm/robotcore/hardware/DcMotor.html#setTargetPosition-int-"><code>DcMotor.setTargetPosition</code></a>. Supply a tick value that you want <code>getCurrentPosition</code> to eventually return.</p>
+<p>As with Run Using Encoder, the power value in <code>RUN_TO_POSITION</code> is interpreted in terms of angular velocity, not electrical power. Note, however, that <strong>you should never supply negative power values in this mode</strong>, since the motor will automatically determine which direction to turn in order to reach the target position.</p>
+<p>To check whether the motor has reached the target position, call <a href="https://ftctechnh.github.io/ftc_app/doc/javadoc/com/qualcomm/robotcore/hardware/DcMotor.html#isBusy--"><code>DcMotor.isBusy</code></a>. This method returns true if the motor is still on its way to the target position. Once the motor reaches the target position, it will start drawing whatever electrical current necessary to maintain that position, and <code>isBusy</code> will start returning false.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>At the beginning of each OpMode, each motor begins with no target position set, and<code>getTargetPosition()</code> returns 0. The FTC SDK requires you to set a motor's target position to a certain value before setting its RunMode to <code>RUN_TO_POSITION</code> for the first time. Therefore, it is typically safer to call <code>setTargetPosition</code> before <code>setMode</code> when asking a motor to run to a certain position.</p>
+</div>
+<h2 id="examples">Examples</h2>
+<p>The following annotated examples demonstrate how to use the <code>DcMotor</code> interface effectively. Feel free to refer to FTC's <a href="https://github.com/FIRST-Tech-Challenge/FtcRobotController/tree/master/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples">official samples</a> for further guidance.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Demo</span> <span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="kd">private</span> <span class="n">DcMotor</span> <span class="n">motor</span><span class="p">;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  <span class="c1">// Basic behavior</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">basicBehavior</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="c1">// Let the motor move in the forward direction at maximum speed</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">motor</span><span class="p">.</span><span class="na">setDirection</span><span class="p">(</span><span class="n">Direction</span><span class="p">.</span><span class="na">FORWARD</span><span class="p">);</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">motor</span><span class="p">.</span><span class="na">setPower</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="c1">// Let the motor move in the reverse direction at maximum speed</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="n">motor</span><span class="p">.</span><span class="na">setDirection</span><span class="p">(</span><span class="n">Direction</span><span class="p">.</span><span class="na">REVERSE</span><span class="p">);</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="n">motor</span><span class="p">.</span><span class="na">setPower</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="c1">// Let the motor move in the forward direction at maximum speed</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="n">motor</span><span class="p">.</span><span class="na">setDirection</span><span class="p">(</span><span class="n">Direction</span><span class="p">.</span><span class="na">REVERSE</span><span class="p">);</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="n">motor</span><span class="p">.</span><span class="na">setPower</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    <span class="c1">// Stop the motor</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    <span class="n">motor</span><span class="p">.</span><span class="na">setPower</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>  <span class="p">}</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>  <span class="c1">// Zero power behavior</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">zeroPowerBehavior</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    <span class="c1">// Let the motor move at maximum speed</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    <span class="n">motor</span><span class="p">.</span><span class="na">setPower</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>    <span class="c1">// Let the motor try to immediately come to a stop</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>    <span class="n">motor</span><span class="p">.</span><span class="na">setZeroPowerBehavior</span><span class="p">(</span><span class="n">ZeroPowerBehavior</span><span class="p">.</span><span class="na">BRAKE</span><span class="p">);</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>    <span class="n">motor</span><span class="p">.</span><span class="na">setPower</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>    <span class="c1">// Let the motor move at maximum speed again</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>    <span class="n">motor</span><span class="p">.</span><span class="na">setPower</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>    <span class="c1">// Stop giving power to the motor and minimize the resistance on the axle such that it gradually coasts to a stop</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>    <span class="n">motor</span><span class="p">.</span><span class="na">setZeroPowerBehavior</span><span class="p">(</span><span class="n">ZeroPowerBehavior</span><span class="p">.</span><span class="na">COAST</span><span class="p">);</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>    <span class="n">motor</span><span class="p">.</span><span class="na">setPower</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>  <span class="p">}</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>  <span class="c1">// Read encoder value and convert it to degrees</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">readEncoderValue</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>    <span class="c1">// Read the current tick value from the encoder</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>    <span class="kt">int</span> <span class="n">tickReading</span> <span class="o">=</span> <span class="n">motor</span><span class="p">.</span><span class="na">getCurrentPosition</span><span class="p">();</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>    <span class="c1">// Assuming a TPR of 1440, convert the tick reading to degrees</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>    <span class="kt">double</span> <span class="n">degrees</span> <span class="o">=</span> <span class="n">tickReading</span> <span class="o">/</span> <span class="mf">1440.0</span> <span class="o">*</span> <span class="mf">360.0</span><span class="p">;</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>  <span class="p">}</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>  <span class="c1">// Use a few run modes</span>
+<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">useRunModes</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>    <span class="c1">// Set the run mode to Run Without Encoder</span>
+<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>    <span class="n">motor</span><span class="p">.</span><span class="na">setMode</span><span class="p">(</span><span class="n">RunMode</span><span class="p">.</span><span class="na">RUN_WITHOUT_ENCODER</span><span class="p">);</span>
+<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>    <span class="c1">// Run the motor at maximum electrical power, opposing the direction setting</span>
+<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>    <span class="n">motor</span><span class="p">.</span><span class="na">setPower</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>
+<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>    <span class="c1">// Set the run mode to Stop and Reset Encoder</span>
+<a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>    <span class="n">motor</span><span class="p">.</span><span class="na">setMode</span><span class="p">(</span><span class="n">RunMode</span><span class="p">.</span><span class="na">STOP_AND_RESET_ENCODER</span><span class="p">);</span>
+<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>    <span class="c1">// Wait for the current position reading to become 0</span>
+<a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>    <span class="k">while</span> <span class="p">(</span><span class="n">motor</span><span class="p">.</span><span class="na">getCurrentPosition</span><span class="p">()</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>
+<a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>    <span class="c1">// Set the run mode to Run Using Encoder</span>
+<a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>    <span class="n">motor</span><span class="p">.</span><span class="na">setMode</span><span class="p">(</span><span class="n">RunMode</span><span class="p">.</span><span class="na">RUN_USING_ENCODER</span><span class="p">);</span>
+<a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>    <span class="c1">// Run the motor at the greatest possible angular velocity in the current direction setting</span>
+<a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>    <span class="n">motor</span><span class="p">.</span><span class="na">setPower</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>  <span class="p">}</span>
+<a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a>
+<a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a>  <span class="c1">// Use the Run To Position mode</span>
+<a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a>  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">runToPosition</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a>    <span class="c1">// First, set the target position to a desired value</span>
+<a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a>    <span class="n">motor</span><span class="p">.</span><span class="na">setTargetPosition</span><span class="p">(</span><span class="mi">1440</span> <span class="o">*</span> <span class="mi">4</span><span class="p">);</span> <span class="c1">// 4 revolutions</span>
+<a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a>    <span class="c1">// Then, set the mode to RUN_TO_POSITION</span>
+<a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a>    <span class="n">motor</span><span class="p">.</span><span class="na">setMode</span><span class="p">(</span><span class="n">RunMode</span><span class="p">.</span><span class="na">RUN_TO_POSITION</span><span class="p">);</span>
+<a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a>    <span class="c1">// Let the motor start rotating at the greatest angular velocity permitted in whatever direction necessary</span>
+<a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a>    <span class="n">motor</span><span class="p">.</span><span class="na">setPower</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a>
+<a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a>    <span class="c1">// Wait for the motor to reach the target position</span>
+<a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a>    <span class="c1">// (note: typically you need to check for isStopRequested as well)</span>
+<a id="__codelineno-0-77" name="__codelineno-0-77" href="#__codelineno-0-77"></a>    <span class="k">while</span> <span class="p">(</span><span class="n">motor</span><span class="p">.</span><span class="na">isBusy</span><span class="p">());</span>
+<a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a>
+<a id="__codelineno-0-79" name="__codelineno-0-79" href="#__codelineno-0-79"></a>    <span class="c1">// Note: setting the power to 0 after the motor reaches the target position is not necessary</span>
+<a id="__codelineno-0-80" name="__codelineno-0-80" href="#__codelineno-0-80"></a>  <span class="p">}</span>
+<a id="__codelineno-0-81" name="__codelineno-0-81" href="#__codelineno-0-81"></a><span class="p">}</span>
+</code></pre></div>
+<h2 id="check-your-understanding">Check your Understanding</h2>
+<ol>
+<li>What are two ways to ensure that a motor uses power to hold its output shaft still?</li>
+<li>What are the steps necessary to let a motor begin to run to a specific target position?</li>
+<li>Suppose you have a typical tank drive drivetrain, with two motors facing opposite directions and powering traction wheels. You supply a power value of 1 to both motors, but the robot turns in place instead of moving forward. How could you fix this problem without changing the power values supplied to each motor?</li>
+</ol>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../configuration/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Hardware Configuration" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Hardware Configuration
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../servos/" class="md-footer__link md-footer__link--next" aria-label="Next: Servos" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Servos
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.467223ff.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+      
+        <script src="../../js/katex.js"></script>
+      
+    
+  </body>
+</html>
