@@ -8,31 +8,37 @@ In the world of FTC, the `DcMotor` is perhaps the most important type of electro
 
 The term `DcMotor` refers to the name of a class in the FTC SDK. This class describes a physical motor, an actuator that causes the rotation of an axle.
 
-{% embed url="https://first-tech-challenge.github.io/SkyStone/doc/javadoc/com/qualcomm/robotcore/hardware/DcMotor.html" caption="" %}
+{% embed url="https://first-tech-challenge.github.io/SkyStone/doc/javadoc/com/qualcomm/robotcore/hardware/DcMotor.html" %}
 
 ## Our Motors
 
+<details>
+
+<summary>Old motors</summary>
+
 ### Tetrix DC Gear Motor
 
-![A Tetrix DC Gear Motor \(from Pitsco\)](../.gitbook/assets/image%20%284%29.png)
+![A Tetrix DC Gear Motor (from Pitsco)](<../.gitbook/assets/image (14).png>)
 
 The club has a great abundance of these motors. Since most of them do not include an encoder, they are unsuitable for consistent autonomous operation or automatic speed control.
 
 ### Neverest Gearmotor
 
-![A Neverest 40 Gearmotor \(from AndyMark\)](../.gitbook/assets/image.png)
+![A Neverest 40 Gearmotor (from AndyMark)](<../.gitbook/assets/image (15).png>)
 
 Recently, the club has obtained many Neverest Gearmotors for more rigorous use cases, such as powering the drivetrain. These have attached encoders that **require 5V to run**. This means that a level shifter is required in order to operate these encoders using REV Expansion Hubs.
 
+</details>
+
 ### goBILDA Yellow Jacket Gear Motor
 
-![A 13.7:1 ratio Yellow Jacket Gear Motor \(from goBILDA\)](../.gitbook/assets/image%20%2819%29.png)
+![A 13.7:1 ratio Yellow Jacket Gear Motor (from goBILDA)](<../.gitbook/assets/image (16).png>)
 
 When developing ARC Thunder's robot for World Championships, we began using these motors to power some mechanisms. They have built-in encoders that work with both 3.3V and 5V, so no level shifter is needed in any scenario. ARC has Yellow Jacket Gear Motors in several gear ratios, meaning that there is a wide range of proportions between speed and torque when selecting these motors. As of the 2020-2021 season, the Yellow Jacket Gear Motor is projected to become the club's default motor choice.
 
 ## Basic Behavior
 
-Let's first examine the interface of [DcMotorSimple](https://ftctechnh.github.io/ftc_app/doc/javadoc/com/qualcomm/robotcore/hardware/DcMotorSimple.html), which describes the functionality of a motor at the minimum level. At any instant, a motor has two properties: **direction** and **power**.
+Let's first examine the interface of [DcMotorSimple](https://ftctechnh.github.io/ftc\_app/doc/javadoc/com/qualcomm/robotcore/hardware/DcMotorSimple.html), which describes the functionality of a motor at the minimum level. At any instant, a motor has two properties: **direction** and **power**.
 
 **Direction** describes the direction of rotation that the motor will cause, given a positive power value. The possible values of direction are _Forward_ and _Reverse_.
 
@@ -44,7 +50,7 @@ This combination of power and direction to determine the actual direction of rot
 
 ## Zero Power Behavior
 
-{% embed url="https://ftctechnh.github.io/ftc\_app/doc/javadoc/com/qualcomm/robotcore/hardware/DcMotor.ZeroPowerBehavior.html" caption="" %}
+{% embed url="https://ftctechnh.github.io/ftc_app/doc/javadoc/com/qualcomm/robotcore/hardware/DcMotor.ZeroPowerBehavior.html" %}
 
 FTC motors allow you to customize their behavior when the power given is 0. The **brake** option tells the motor to actively resist any rotational motion when the power is 0, whereas the **float** option simply cuts power from the motor and allows external forces to accelerate or decelerate rotation with minimal resistance.
 
@@ -54,17 +60,19 @@ If it is very important that a motor holds its position in certain situations, s
 
 ## Encoder-based Operation
 
-An [**encoder** ](https://en.wikipedia.org/wiki/Rotary_encoder)is a device that measures the angular position of an axle. In FTC, we use encoders regularly to rotate motors in precise amounts, enact software limits to avoid damage, or require motors to hold a constant rotational speed.
+An [**encoder** ](https://en.wikipedia.org/wiki/Rotary\_encoder)is a device that measures the angular position of an axle. In FTC, we use encoders regularly to rotate motors in precise amounts, enact software limits to avoid damage, or require motors to hold a constant rotational speed.
 
-Because of how encoders work internally, the numerical output from an encoder is called a **tick**. Each type of motor has a different **ticks-per-revolution \(TPR\)** constant, which is the number of ticks that are emitted as a result of one 360-degree revolution of the motor output axle. For example, the Neverest 40 Gearmotor has a TPR constant of $$1120$$, so if the encoder's output is $$4816$$, the number of revolutions would be $$\frac{4816}{1120}=4.3$$, and the number of degrees rotated would be$$4.3\times 360=1548^\circ$$. When tick readings are negative, the net amount of rotation of the motor's output axle is in the opposite direction of the current direction value.
+Because of how encoders work internally, the numerical output from an encoder is called a **tick**. Each type of motor has a different **ticks-per-revolution (TPR)** constant, which is the number of ticks that are emitted as a result of one 360-degree revolution of the motor output axle. For example, the Neverest 40 Gearmotor has a TPR constant of $$1120$$, so if the encoder's output is $$4816$$, the number of revolutions would be $$\frac{4816}{1120}=4.3$$, and the number of degrees rotated would be$$4.3\times 360=1548^\circ$$. When tick readings are negative, the net amount of rotation of the motor's output axle is in the opposite direction of the current direction value.
 
-In the `DcMotor` interface, the method [`getCurrentPosition`](https://ftctechnh.github.io/ftc_app/doc/javadoc/com/qualcomm/robotcore/hardware/DcMotor.html#getCurrentPosition--) returns the current tick reading of the motor. If the motor's encoder does not exist or is not plugged in correctly, `getCurrentPosition` always returns 0.
+In the `DcMotor` interface, the method [`getCurrentPosition`](https://ftctechnh.github.io/ftc\_app/doc/javadoc/com/qualcomm/robotcore/hardware/DcMotor.html#getCurrentPosition--) returns the current tick reading of the motor. If the motor's encoder does not exist or is not plugged in correctly, `getCurrentPosition` always returns 0.
 
 ### Run Modes
 
-{% embed url="https://ftctechnh.github.io/ftc\_app/doc/javadoc/com/qualcomm/robotcore/hardware/DcMotor.RunMode.html" caption="JavaDocs for the RunMode enum from the FTC SDK" %}
+{% embed url="https://ftctechnh.github.io/ftc_app/doc/javadoc/com/qualcomm/robotcore/hardware/DcMotor.RunMode.html" %}
+JavaDocs for the RunMode enum from the FTC SDK
+{% endembed %}
 
-At any instant, a `DcMotor` must be in one of four possible run modes: `RUN_WITHOUT_ENCODER`, `STOP_AND_RESET_ENCODER`, `RUN_USING_ENCODER`, and `RUN_TO_POSITION`. These modes determine how the motor interprets power values. We can retrieve the current run mode of a motor using [`DcMotor.getMode`](https://ftctechnh.github.io/ftc_app/doc/javadoc/com/qualcomm/robotcore/hardware/DcMotor.html#getMode--), and we can set the run mode of a motor using [`DcMotor.setMode`](https://ftctechnh.github.io/ftc_app/doc/javadoc/com/qualcomm/robotcore/hardware/DcMotor.html#setMode-com.qualcomm.robotcore.hardware.DcMotor.RunMode-).
+At any instant, a `DcMotor` must be in one of four possible run modes: `RUN_WITHOUT_ENCODER`, `STOP_AND_RESET_ENCODER`, `RUN_USING_ENCODER`, and `RUN_TO_POSITION`. These modes determine how the motor interprets power values. We can retrieve the current run mode of a motor using [`DcMotor.getMode`](https://ftctechnh.github.io/ftc\_app/doc/javadoc/com/qualcomm/robotcore/hardware/DcMotor.html#getMode--), and we can set the run mode of a motor using [`DcMotor.setMode`](https://ftctechnh.github.io/ftc\_app/doc/javadoc/com/qualcomm/robotcore/hardware/DcMotor.html#setMode-com.qualcomm.robotcore.hardware.DcMotor.RunMode-).
 
 #### Run Without Encoder
 
@@ -86,11 +94,11 @@ When making a configuration for REV Expansion Hubs, you are asked to select the 
 
 #### Run To Position
 
-Using the `RUN_TO_POSITION` mode, you can have the motor automatically reach a specific **target position** in encoder ticks. To set the target position of a motor, call [`DcMotor.setTargetPosition`](https://ftctechnh.github.io/ftc_app/doc/javadoc/com/qualcomm/robotcore/hardware/DcMotor.html#setTargetPosition-int-). Supply a tick value that you want `getCurrentPosition` to eventually return.
+Using the `RUN_TO_POSITION` mode, you can have the motor automatically reach a specific **target position** in encoder ticks. To set the target position of a motor, call [`DcMotor.setTargetPosition`](https://ftctechnh.github.io/ftc\_app/doc/javadoc/com/qualcomm/robotcore/hardware/DcMotor.html#setTargetPosition-int-). Supply a tick value that you want `getCurrentPosition` to eventually return.
 
 As with Run Using Encoder, the power value in `RUN_TO_POSITION` is interpreted in terms of angular velocity, not electrical power. Note, however, that **you should never supply negative power values in this mode**, since the motor will automatically determine which direction to turn in order to reach the target position.
 
-To check whether the motor has reached the target position, call [`DcMotor.isBusy`](https://ftctechnh.github.io/ftc_app/doc/javadoc/com/qualcomm/robotcore/hardware/DcMotor.html#isBusy--). This method returns true if the motor is still on its way to the target position. Once the motor reaches the target position, it will start drawing whatever electrical current necessary to maintain that position, and `isBusy` will start returning false.
+To check whether the motor has reached the target position, call [`DcMotor.isBusy`](https://ftctechnh.github.io/ftc\_app/doc/javadoc/com/qualcomm/robotcore/hardware/DcMotor.html#isBusy--). This method returns true if the motor is still on its way to the target position. Once the motor reaches the target position, it will start drawing whatever electrical current necessary to maintain that position, and `isBusy` will start returning false.
 
 {% hint style="warning" %}
 At the beginning of each OpMode, each motor begins with no target position set, and`getTargetPosition()` returns 0. The FTC SDK requires you to set a motor's target position to a certain value before setting its RunMode to `RUN_TO_POSITION` for the first time. Therefore, it is typically safer to call `setTargetPosition` before `setMode` when asking a motor to run to a certain position.
@@ -189,4 +197,3 @@ public class Demo {
 1. What are two ways to ensure that a motor uses power to hold its output shaft still?
 2. What are the steps necessary to let a motor begin to run to a specific target position?
 3. Suppose you have a typical tank drive drivetrain, with two motors facing opposite directions and powering traction wheels. You supply a power value of 1 to both motors, but the robot turns in place instead of moving forward. How could you fix this problem without changing the power values supplied to each motor?
-

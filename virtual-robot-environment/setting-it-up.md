@@ -8,7 +8,7 @@ In this lesson, we will be teaching you how to set up your very own Virtual Robo
 
 This section may be skipped if you already have the Java Development Kit.
 
-{% embed url="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html" caption="" %}
+{% embed url="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html" %}
 
 Navigate to the link above and download the appropriate Java SE Development Kit 8u251 installer for your system.
 
@@ -20,7 +20,7 @@ Next, run the installer and follow the instructions to install the JDK.
 
 This section may be skipped if you already have IntelliJ installed.
 
-{% embed url="https://www.jetbrains.com/idea/" caption="" %}
+{% embed url="https://www.jetbrains.com/idea/" %}
 
 Navigate to the link above and click on the download button in the middle left.
 
@@ -36,7 +36,7 @@ Run the installer and follow the instructions, accepting the defaults.
 
 Next, we are going to download the Virtual Robot Project from Github. Go to the link below and click on the Clone or Download button.
 
-{% embed url="https://github.com/Beta8397/virtual\_robot" caption="" %}
+{% embed url="https://github.com/Beta8397/virtual_robot" %}
 
 ![](../.gitbook/assets/Beta8397.png)
 
@@ -81,7 +81,7 @@ Remove the fields `mecanumDrive` and `distances`. Your class should look somethi
 
 ![](../.gitbook/assets/mecanum2.png)
 
-We are now going to init the DcMotors using a special class that helps you retrieve hardware devices from configuration in code. That’s right: it’s `hardwareMap`! \(Revisit the [HardwareConfiguration](../hardware-interaction/configuration.md) page for a quick reminder\).
+We are now going to init the DcMotors using a special class that helps you retrieve hardware devices from configuration in code. That’s right: it’s `hardwareMap`! (Revisit the [HardwareConfiguration](../hardware-interaction/configuration.md) page for a quick reminder).
 
 We want to initialize the front left motor, the front right motor, the back left motor, and the back right motor. These are all `DcMotors`, and their names have been written as `front_left_motor`, `front_right_motor`, `back_left_motor`, and `back_right_motor` in the configuration.
 
@@ -116,4 +116,3 @@ All together, it should look something like this:
 ![](../.gitbook/assets/init2.png)
 
 Congratulations! You have set up your very own Virtual Robot Environment. In future lessons, we will teach you how to use it to simulate different OpModes, and you’ll learn how to write some yourself!
-
